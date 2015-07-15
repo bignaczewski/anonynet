@@ -1,0 +1,48 @@
+pl:
+  simple_form:
+    "yes": 'Tak'
+    "no": 'Nie'
+    resend_unlock_instructions: "Ponownie wyślij informacje dotyczące odblokowania konta"
+    resend_conf_instructions: "Ponownie wyślij informacje dotyczące potwierdzenia konta"
+    chars_min: "znaków minimum"
+    currently_waiting_confirmation_for: "Obecnie oczekuje na potwierdzenie"
+    leave_blank: "pozostaw puste pole jeśli nie chcesz zmieniać"
+    need_current_pass: "potrzebujemy Twojego obecnego hasła aby wprowadzić zmiany"
+    send_reset_instruct: "Wyślij instrukcje dotyczące resetowania hasła"
+    new_pass: "Nowe hasło"
+    conf_new_pass: "Potwierdź swoje nowe hasło"
+    email: "Adres email"
+    password: "Hasło"
+    remember_me: "Pamiętaj mnie"
+    current_pass: "Aktualne hasło"
+    conf_pass: "Potwierdź hasło"
+    name: "Imię"
+    surname: "Nazwisko"
+    message: "Wiadomość"
+    required:
+      text: 'Pole wymagane'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Proszę zapoznać się z poniższymi problemami:"
+    # Examples
+    # labels:
+    #   defaults:
+    #     password: 'Password'
+    #   user:
+    #     new:
+    #       email: 'E-mail to sign in.'
+    #     edit:
+    #       email: 'E-mail.'
+    # hints:
+    #   defaults:
+    #     username: 'User name to sign in.'
+    #     password: 'No special characters, please.'
+    # include_blanks:
+    #   defaults:
+    #     age: 'Rather not say'
+    # prompts:
+    #   defaults:
+    #     age: 'Select your age'

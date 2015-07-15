@@ -1,0 +1,48 @@
+en:
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    resend_unlock_instructions: "Resend unlock instructions"
+    resend_conf_instructions: "Resend confirmation instructions"
+    chars_min: "characters minimum"
+    currently_waiting_confirmation_for: "Currently waiting confirmation for"
+    leave_blank: "leave it blank if you don't want to change it"
+    need_current_pass: "we need your current password to confirm your changes"
+    send_reset_instruct: "Send me reset password instructions"
+    new_pass: "New password"
+    conf_new_pass: "Confirm your new password"
+    email: "Email"
+    password: "Password"
+    remember_me: "Remember me"
+    current_pass: "Current password"
+    conf_pass: "Confirm password"
+    name: "Name"
+    surname: "Surname"
+    message: "Message"
+    required:
+      text: 'required'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Please review the problems below:"
+    # Examples
+    # labels:
+    #   defaults:
+    #     password: 'Password'
+    #   user:
+    #     new:
+    #       email: 'E-mail to sign in.'
+    #     edit:
+    #       email: 'E-mail.'
+    # hints:
+    #   defaults:
+    #     username: 'User name to sign in.'
+    #     password: 'No special characters, please.'
+    # include_blanks:
+    #   defaults:
+    #     age: 'Rather not say'
+    # prompts:
+    #   defaults:
+    #     age: 'Select your age'

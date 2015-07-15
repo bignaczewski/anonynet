@@ -32,6 +32,28 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
+# TODO: https://github.com/plataformatec/devise (start with User model migration)
+# then https://github.com/CanCanCommunity/cancancan
+# then http://hibbard.eu/authentication-with-devise-and-cancancan-in-rails-4-2/
+gem 'devise'
+gem 'simple_form'
+gem 'cancancan'
+
+gem 'rails-i18n'
+gem 'i18n-language-translations'
+
+# Pagination
+gem 'kaminari'
+
+# haml instead of html.erb
+gem 'haml-rails'
+
+gem 'bootstrap-sass'
+gem 'rails_layout'
+gem 'bootstrap-generators'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -41,5 +63,20 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Better looking errors in web browser
+  gem 'better_errors'
+
+  # Inspection tool
+  gem 'binding_of_caller'
+
+  # Less text in logs concerning assets
+  gem 'quiet_assets'
+
+  # Better Ruby console than irb
+  gem 'pry-rails'
+
+  # html.erb to haml converter
+  gem 'erb2haml'
 end
 

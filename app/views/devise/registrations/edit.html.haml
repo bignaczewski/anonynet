@@ -1,0 +1,22 @@
+.col-md-3
+.col-md-6
+  .panel.panel-info
+    .panel-heading
+      %h4= (t 'edit') + ' ' + resource_name.to_s.humanize
+  .panel-body
+    = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put, class: 'form-vertical'}) do |f|
+      = f.error_notification
+      .form-inputs
+        = f.input :name, :label => (t 'simple_form.name'), :readonly => true
+        = f.input :surname, :label => (t 'simple_form.surname'), :readonly => true
+        = f.input :email, autofocus: true, required: true, :label => (t 'simple_form.email')
+        - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+          %p
+            = t 'simple_form.currently_waiting_confirmation_for'
+            \: #{resource.unconfirmed_email}
+        = f.input :password, autocomplete: 'off', hint: (t 'simple_form.leave_blank'), required: false, :label => (t 'simple_form.new_pass')
+        = f.input :password_confirmation, required: false, :label => (t 'simple_form.conf_new_pass')
+        = f.input :current_password, hint: (t 'simple_form.need_current_pass'), required: true, :label => (t 'simple_form.current_pass')
+      .form-actions
+        = f.button :submit, (t 'update'), :class => 'btn btn-primary'
+    = link_to (t 'back'), :back
