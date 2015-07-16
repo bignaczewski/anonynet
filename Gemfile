@@ -48,13 +48,16 @@ gem 'kaminari'
 
 # haml instead of html.erb
 gem 'haml-rails'
-# and next slim instead of haml
-gem 'slim'
 
 gem 'bootstrap-sass'
 gem 'rails_layout'
 gem 'bootstrap-generators'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
+
+group :production do
+  # For Heroku needs
+  gem 'thin'
+end
 
 group :development, :test do
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -80,8 +83,6 @@ group :development, :test do
 
   # html.erb to haml converter
   gem 'erb2haml'
-  # and haml to slim converter
-  gem 'haml2slim'
 
   gem 'letter_opener'
   gem 'launchy'

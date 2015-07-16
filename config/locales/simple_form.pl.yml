@@ -27,6 +27,7 @@ pl:
     categories:
       question: "Pytanie dotyczące użycia"
       bug: "Zgłoszenie błędu"
+      ban: "Zablokowanie konta"
       other: "Inne"
     required:
       text: 'Pole wymagane'

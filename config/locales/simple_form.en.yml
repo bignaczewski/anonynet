@@ -27,6 +27,7 @@ en:
     categories:
       question: "Question concerning the usage"
       bug: "Bug report"
+      ban: "Account issues"
       other: "Other"
     required:
       text: 'required'
