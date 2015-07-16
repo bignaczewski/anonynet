@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: Anonynet_production
-  username: Anonynet
+  database: de1mhttek8gfsk
+  username: hvgfdslloeyxrp
   password: <%= ENV['ANONYNET_DATABASE_PASSWORD'] %>
+  url: <%= ENV['ANONYNET_DATABASE_URL'] %>

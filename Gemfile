@@ -54,9 +54,14 @@ gem 'rails_layout'
 gem 'bootstrap-generators'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 
+# Don't upload secrets.yml, use below instead
+gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
+
 group :production do
   # For Heroku needs
   gem 'thin'
+  # Heroku logging etc
+  gem 'rails_12factor'
 end
 
 group :development, :test do
