@@ -16,9 +16,18 @@ pl:
     remember_me: "Pamiętaj mnie"
     current_pass: "Aktualne hasło"
     conf_pass: "Potwierdź hasło"
+    required: "Pole wymagane"
+    not_required: "Pole niewymagane"
     name: "Imię"
     surname: "Nazwisko"
+    nicname: "Pseudonim"
+    email_concact: "Email"
     message: "Wiadomość"
+    category: "Kategoria"
+    categories:
+      question: "Pytanie dotyczące użycia"
+      bug: "Zgłoszenie błędu"
+      other: "Inne"
     required:
       text: 'Pole wymagane'
       mark: '*'

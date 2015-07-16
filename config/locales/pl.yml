@@ -54,7 +54,7 @@ pl:
   approved: "Zaakceptowano"
   contact_form: "Formularz kontaktowy"
   thank_you_for_your_message: "Dziękujemy za wysłanie wiadomości."
-  we_will_get_bat_to_you_soon: "Nasz zespół odpowie jak najszybciej."
+  we_will_get_back_to_you_soon: "Nasz zespół odpowie jak najszybciej."
   cannot_send_message: "Nie można było wysłać wiadomości."
   contact: "Kontakt"
   send_message: "Wyślij wiadomość"

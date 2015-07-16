@@ -16,9 +16,18 @@ en:
     remember_me: "Remember me"
     current_pass: "Current password"
     conf_pass: "Confirm password"
+    required: "Required field"
+    not_required: "Not required field"
     name: "Name"
     surname: "Surname"
+    nicname: "Nickname"
+    email_concact: "Email"
     message: "Message"
+    category: "Category"
+    categories:
+      question: "Question concerning the usage"
+      bug: "Bug report"
+      other: "Other"
     required:
       text: 'required'
       mark: '*'

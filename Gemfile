@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use postgresql as the database for Active Record
@@ -32,13 +31,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-
 # TODO: https://github.com/plataformatec/devise (start with User model migration)
 # then https://github.com/CanCanCommunity/cancancan
 # then http://hibbard.eu/authentication-with-devise-and-cancancan-in-rails-4-2/
 gem 'devise'
 gem 'simple_form'
 gem 'cancancan'
+
+gem 'mail_form'
 
 gem 'rails-i18n'
 gem 'i18n-language-translations'
@@ -48,6 +48,8 @@ gem 'kaminari'
 
 # haml instead of html.erb
 gem 'haml-rails'
+# and next slim instead of haml
+gem 'slim'
 
 gem 'bootstrap-sass'
 gem 'rails_layout'
@@ -55,9 +57,6 @@ gem 'bootstrap-generators'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
@@ -76,7 +75,15 @@ group :development, :test do
   # Better Ruby console than irb
   gem 'pry-rails'
 
+  # Debugger for above. Call 'binding.pry' anywhere in the code to stop execution and get a debugger console
+  gem 'pry-byebug'
+
   # html.erb to haml converter
   gem 'erb2haml'
+  # and haml to slim converter
+  gem 'haml2slim'
+
+  gem 'letter_opener'
+  gem 'launchy'
 end
 

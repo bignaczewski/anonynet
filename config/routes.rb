@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get '/change_locale/:locale', to: 'settings#change_locale', as: :change_locale
 
+  resources 'contacts', only: [:new, :create]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
