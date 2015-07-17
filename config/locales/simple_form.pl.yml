@@ -20,7 +20,7 @@ pl:
     not_required: "Pole niewymagane"
     name: "Imię"
     surname: "Nazwisko"
-    nicname: "Pseudonim"
+    nickname: "Login"
     email_concact: "Email"
     message: "Wiadomość"
     category: "Kategoria"

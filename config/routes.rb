@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   resources 'contacts', only: [:new, :create]
 
+  devise_for :users
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

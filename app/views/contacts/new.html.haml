@@ -8,9 +8,8 @@
       .form-inputs
         = f.input :name, :required => false, :label => (t 'simple_form.name')
         = f.input :surname, :required => false, :label => (t 'simple_form.surname')
-        - #if current_user
-        - # TODO: jesli użytkownik jest zalogowany to powinna się pojawiać wartość jego nickname w dodatkowym polu
-        - #end
+        - if user_signed_in?
+          = f.input :nickname, :required => false, :label => (t 'simple_form.nickname'), :input_html => { :value => current_user[:nickname] }
         = f.input :email, :required => false, :label => (t 'simple_form.email')
         = f.input :category, :label => (t 'simple_form.category'), :collection => (t 'simple_form.categories').values, :selected => [0], :required => true
         = f.input :message, :as => :text, :input_html => {:rows => 10}, :label => (t 'simple_form.message'), :required => true

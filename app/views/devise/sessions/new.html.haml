@@ -6,7 +6,7 @@
   .panel-body
     = simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-vertical'}) do |f|
       .form-inputs
-        = f.input :email, required: false, autofocus: true, :label => (t 'simple_form.email')
+        = f.input :nickname, required: false, autofocus: true, :label => (t 'simple_form.nickname')
         = f.input :password, required: false, :label => (t 'simple_form.password')
         = f.input :remember_me, :label => (t 'simple_form.remember_me'), as: :boolean if devise_mapping.rememberable?
       .form-actions

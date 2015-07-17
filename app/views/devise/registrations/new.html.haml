@@ -7,9 +7,7 @@
     = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'form-vertical'}) do |f|
       = f.error_notification
       .form-inputs
-        = f.input :name, required: true, autofocus: true, :label => (t 'simple_form.name')
-        = f.input :surname, required: true, :label => (t 'simple_form.surname')
-        = f.input :email, required: true, :label => (t 'simple_form.email')
+        = f.input :nickname, required: true, autofocus: true, :label => (t 'simple_form.nickname')
         = f.input :password, :label => (t 'simple_form.password'), required: true, hint: ("#{@minimum_password_length} #{t 'simple_form.chars_min'}" if @validatable)
         = f.input :password_confirmation, required: true, :label => (t 'simple_form.conf_pass')
       .form-actions

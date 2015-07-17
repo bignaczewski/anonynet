@@ -9,10 +9,10 @@ pl:
     failure:
       already_authenticated: "Jesteś aktualnie zalogowany."
       inactive: "Twoje konto nie zostało jeszcze aktywowane."
-      invalid: "Błędny adres email lub hasło."
+      invalid: "Błędny login lub hasło."
       invalid_token: "Błędny token aktywacyjny."
       locked: "Twoje konto jest zablokowane."
-      not_found_in_database: "Błędny adres email lub hasło."
+      not_found_in_database: "Błędny login lub hasło."
       timeout: "Sesja wygasła, zaloguj się ponownie by kontynuować."
       unauthenticated: "Aby kontynuować musisz się zalogować."
       unconfirmed: "Aby kontynuować musisz aktywować swoje konto."

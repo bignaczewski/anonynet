@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   before_action :set_locale
 
+  before_filter :configure_permitted_parameters, if: :devise_controller?
+
   def set_locale
     if cookies[:educator_locale] && I18n.available_locales.include?(cookies[:educator_locale].to_sym)
       l = cookies[:educator_locale].to_sym
@@ -23,6 +25,14 @@ class ApplicationController < ActionController::Base
   def extract_locale_from_tld
     parsed_locale = request.host.split('.').last
     I18n.available_locales.map(&:to_s).include?(parsed_locale) ? parsed_locale : nil
+  end
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) do |u|
+      u.permit :nickname, :password, :password_confirmation
+    end
   end
 
 end

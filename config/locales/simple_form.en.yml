@@ -20,7 +20,7 @@ en:
     not_required: "Not required field"
     name: "Name"
     surname: "Surname"
-    nicname: "Nickname"
+    nickname: "Login"
     email_concact: "Email"
     message: "Message"
     category: "Category"
