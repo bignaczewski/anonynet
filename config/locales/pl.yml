@@ -61,6 +61,10 @@ pl:
   previous_label: "Poprzednia strona"
   next_label: "Następna strona"
   approve_users: "Zaakceptuj użytkowników"
+  posts:
+    post: "Post"
+    share: "Opublikuj"
+    content: "Czym chcesz się podzielić?"
   date:
     abbr_day_names:
       - nie

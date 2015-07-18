@@ -57,6 +57,9 @@ gem 'sprockets-rails', :require => 'sprockets/railtie'
 # Don't upload secrets.yml, use below instead
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 
+# For following, liking and mentioning
+gem 'socialization'
+
 group :production do
   # For Heroku needs
   gem 'thin'

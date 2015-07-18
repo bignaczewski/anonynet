@@ -61,6 +61,10 @@ en:
   previous_label: "Previous label"
   next_label: "Next label"
   approve_users: "Approve users"
+  posts:
+    post: "Post"
+    share: "Share"
+    content: "What would you like to share?"
   date:
     abbr_day_names:
       - Sun

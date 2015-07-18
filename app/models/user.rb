@@ -3,6 +3,10 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable, :recoverable, :trackable, :validatable
   devise :database_authenticatable, :registerable, :rememberable
 
+  acts_as_liker
+
+  has_many :posts
+
   validates :nickname, presence: true
   validates :nickname, uniqueness: true, if: -> { self.nickname.present? }
   validates_presence_of :password, :on => :create
