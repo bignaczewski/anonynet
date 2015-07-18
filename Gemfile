@@ -31,9 +31,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# TODO: https://github.com/plataformatec/devise (start with User model migration)
-# then https://github.com/CanCanCommunity/cancancan
-# then http://hibbard.eu/authentication-with-devise-and-cancancan-in-rails-4-2/
 gem 'devise'
 gem 'simple_form'
 gem 'cancancan'
@@ -59,6 +56,9 @@ gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 
 # For following, liking and mentioning
 gem 'socialization'
+
+# Adding images to posts
+gem 'paperclip'
 
 group :production do
   # For Heroku needs

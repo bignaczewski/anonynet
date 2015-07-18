@@ -62,7 +62,6 @@ pl:
   next_label: "Następna strona"
   approve_users: "Zaakceptuj użytkowników"
   posts:
-    post: "Post"
     share: "Opublikuj"
     content: "Czym chcesz się podzielić?"
   date:
@@ -300,3 +299,15 @@ pl:
         long: "%B %d, %Y %H:%M"
         short: "%d %b %H:%M"
       pm: po południu
+  activerecord:
+    attributes:
+      post:
+        post_name: 'Post'
+        image_content_content_type: 'Typ pliku'
+        image_content: 'Zawartość pliku'
+    errors:
+      models:
+        post:
+          attributes:
+            size: 'Plik ma za duży rozmiar'
+            content_type: 'Złe rozszerzenie pliku'

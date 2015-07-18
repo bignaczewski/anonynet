@@ -43,4 +43,7 @@ Rails.application.configure do
   config.application_domain = 'localhost:3000'
 
   config.action_mailer.delivery_method = :letter_opener
+
+  #imagemagick jest potrzebny do paperclipa
+  Paperclip.options[:command_path] = '/usr/local/bin/'
 end

@@ -62,7 +62,6 @@ en:
   next_label: "Next label"
   approve_users: "Approve users"
   posts:
-    post: "Post"
     share: "Share"
     content: "What would you like to share?"
   date:
@@ -268,3 +267,15 @@ en:
         long: "%B %d, %Y %H:%M"
         short: "%d %b %H:%M"
       pm: pm
+  activerecord:
+    attributes:
+      post:
+        post_name: 'Post'
+        image_content_content_type: 'File type'
+        image_content: 'File content'
+    errors:
+      models:
+        post:
+          attributes:
+            size: 'File is too big'
+            content_type: 'Wrong file format'

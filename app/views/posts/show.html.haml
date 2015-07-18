@@ -6,6 +6,9 @@
 %p
   %b Content:
   = @post.content
+%p
+  %b Image:
+  = image_tag @post.image_content.url if @post.image_content.exists?
 
 = link_to 'Edit', edit_post_path(@post)
 \|
