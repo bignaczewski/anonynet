@@ -1,6 +1,6 @@
 %p#notice= notice
 %p
-  = @post.content
+  = @post.content_html
 = image_tag @post.image_content.url if @post.image_content.exists?
 %div{:class => "#{@post.class}-#{@post.id}"}
   = render 'shared/like_form', likeable: @post

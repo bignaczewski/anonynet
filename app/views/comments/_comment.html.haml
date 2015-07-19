@@ -1,7 +1,7 @@
 .comment
   - if comment
     %div
-      = comment.content
+      = comment.content_html
     %div{:class => "#{comment.class}-#{comment.id}"}
       = render 'shared/like_form', likeable: comment
       .likes= pluralize(comment.likers(User).count, I18n.t('posts.like'))

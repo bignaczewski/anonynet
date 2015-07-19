@@ -62,6 +62,9 @@ gem 'paperclip'
 # For seeding the db
 gem 'betterlorem'
 
+# For linking YT videos, Vimeo, images etc
+gem 'auto_html'
+
 group :production do
   # For Heroku needs
   gem 'thin'

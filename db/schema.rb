@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150719110142) do
+ActiveRecord::Schema.define(version: 20150719172827) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,13 +19,14 @@ ActiveRecord::Schema.define(version: 20150719110142) do
   create_table "comments", force: :cascade do |t|
     t.text     "content"
     t.integer  "post_id"
-    t.integer  "user_id"
+    t.integer  "users_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "content_html"
   end
 
   add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
+  add_index "comments", ["users_id"], name: "index_comments_on_users_id", using: :btree
 
   create_table "likes", force: :cascade do |t|
     t.string   "liker_type"
@@ -47,6 +48,7 @@ ActiveRecord::Schema.define(version: 20150719110142) do
     t.string   "image_content_content_type"
     t.integer  "image_content_file_size"
     t.datetime "image_content_updated_at"
+    t.text     "content_html"
   end
 
   create_table "users", force: :cascade do |t|

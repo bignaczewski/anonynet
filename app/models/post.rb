@@ -9,4 +9,13 @@ class Post < ActiveRecord::Base
   validates_attachment_content_type :image_content, :content_type => /\Aimage\/.*\Z/,
                                     :size => {:in => 0..10.megabytes}
 
+  auto_html_for :content do
+    html_escape
+    image
+    youtube
+    twitter
+    link :target => '_blank', :rel => 'nofollow'
+    simple_format
+  end
+
 end
