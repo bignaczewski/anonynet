@@ -1,24 +1,25 @@
 %h1 Listing posts
 
-%table
-  %thead
-    %tr
-      %th User
-      %th Content
-      %th
-      %th
-      %th
+-@posts.each do |post|
+  .post{id: post.id}
+    .content
+      =post.content
+    - if post.image_content.exists?
+      =image_tag(post.image_content, :class => 'img-rounded img-responsive')
+    %div{class: "#{post.class}-#{post.id}"}
+      =render 'shared/like_form', likeable: post
+      .comments{id: "link_to-#{post.id}"}
+        =pluralize(post.comments.count, I18n.t('posts.comment'))
+      .likes
+        =pluralize(post.likers(User).count, I18n.t('posts.like'))
+    %div{id: "link-show-#{post.id}"}
+      =link_to (t('posts.show_comments')), show_comments_path(id: post.id), remote: true, data: {id: post.id}
 
-  %tbody
-    - @posts.each do |post|
-      %tr
-        %td= post.user_id
-        %td= post.content
-        %td= post.created_at
-        %td= link_to 'Show', post
-        %td= link_to 'Edit', edit_post_path(post)
-        %td= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
+  %br
+  %br
+  %br
+  %br
+  %br
+  %br
 
 = link_to 'New Post', new_post_path

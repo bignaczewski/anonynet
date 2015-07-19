@@ -69,6 +69,8 @@ pl:
     comment: "komentarz"
     comments: "komentarze"
     likes: "polubienia"
+    hide_comments: "Ukryj komentarze"
+    show_comments: "Pokaż komentarze"
   date:
     abbr_day_names:
       - nie

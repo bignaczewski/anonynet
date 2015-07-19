@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
+  respond_to :js
 
   # GET /posts
   # GET /posts.json
@@ -49,6 +50,28 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_with(@post)
+  end
+
+  def show_comments
+    @comment = Comment.new
+    @post = Post.find(params[:id])
+    @comments = @post.comments
+
+    respond_to do |format|
+      format.js
+      format.html
+      format.json { render json: @post }
+    end
+  end
+
+  def hide_comments
+    @post = Post.find(params[:id])
+
+    respond_to do |format|
+      format.js
+      format.html
+      format.json { render json: @post }
+    end
   end
 
   private

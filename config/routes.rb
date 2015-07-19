@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   resources :comments
-  resources :posts
+  resources :posts, only: [:new, :create, :index, :show_comments, :hide_comments]
+  get 'show_comments' => 'posts#show_comments', as: :show_comments
+  get 'hide_comments' => 'posts#hide_comments', as: :hide_comments
 
   root 'home#index'
 

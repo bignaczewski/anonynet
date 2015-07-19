@@ -92,7 +92,7 @@ group :development, :test do
   gem 'pry-byebug'
 
   # html.erb to haml converter
-  gem 'erb2haml'
+  gem 'erb2haml' # http://htmltohaml.com good online converter
 
   gem 'letter_opener'
   gem 'launchy'

@@ -69,6 +69,8 @@ en:
     comment: "comment"
     comments: "comments"
     likes: "likes"
+    hide_comments: "Hide comments"
+    show_comments: "Show comments"
   date:
     abbr_day_names:
       - Sun
