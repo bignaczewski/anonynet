@@ -65,6 +65,9 @@ gem 'betterlorem'
 # For linking YT videos, Vimeo, images etc
 gem 'auto_html'
 
+# For obscenity filtration
+gem 'obscenity'
+
 group :production do
   # For Heroku needs
   gem 'thin'

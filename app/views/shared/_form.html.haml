@@ -8,7 +8,6 @@
         - @comment.errors.full_messages.each do |msg|
           %li= msg
   = f.hidden_field :post_id, value: @post.id
-  = f.hidden_field :user_id, value: current_user.id
   .field
     = f.text_area :content, :id => "submit-#{@post.id}"
   .actions

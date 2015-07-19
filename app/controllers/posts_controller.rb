@@ -36,7 +36,8 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(post_params, user_id: current_user.id)
+    @post = Post.new(post_params, content_html: Obscenity.sanitize(post_params[:content]))
+    @post.user_id = current_user.id
     @post.save
     respond_with(@post)
   end
@@ -81,6 +82,6 @@ class PostsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def post_params
-    params.require(:post).permit(:content, :image_content, :content_html)
+    params.require(:post).permit(:content, :image_content, :content_html, :user_id)
   end
 end
