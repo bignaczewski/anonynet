@@ -1,0 +1,6 @@
+- if current_user
+  #like_form
+    - if current_user.likes?(likeable)
+      = render 'shared/unlike', likeable: likeable
+    - else
+      = render 'shared/like', likeable: likeable

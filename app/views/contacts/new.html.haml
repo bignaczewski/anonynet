@@ -8,7 +8,7 @@
       .form-inputs
         = f.input :name, :required => false, :label => (t 'simple_form.name')
         = f.input :surname, :required => false, :label => (t 'simple_form.surname')
-        - if user_signed_in?
+        - if current_user
           = f.input :nickname, :required => false, :label => (t 'simple_form.nickname'), :input_html => { :value => current_user[:nickname] }
         = f.input :email, :required => false, :label => (t 'simple_form.email')
         = f.input :category, :label => (t 'simple_form.category'), :collection => (t 'simple_form.categories').values, :selected => [0], :required => true

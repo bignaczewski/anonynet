@@ -64,6 +64,11 @@ en:
   posts:
     share: "Share"
     content: "What would you like to share?"
+    like: "like"
+    unlike: "unlike"
+    comment: "comment"
+    comments: "comments"
+    likes: "likes"
   date:
     abbr_day_names:
       - Sun

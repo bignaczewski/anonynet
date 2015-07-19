@@ -64,6 +64,11 @@ pl:
   posts:
     share: "Opublikuj"
     content: "Czym chcesz się podzielić?"
+    like: "polub"
+    unlike: "odpolub"
+    comment: "komentarz"
+    comments: "komentarze"
+    likes: "polubienia"
   date:
     abbr_day_names:
       - nie

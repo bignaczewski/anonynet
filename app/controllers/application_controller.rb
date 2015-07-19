@@ -17,6 +17,14 @@ class ApplicationController < ActionController::Base
     I18n.locale = l
   end
 
+  def after_sign_in_path_for(resource)
+    posts_path
+  end
+
+  def after_sign_out_path_for(resource_or_scope)
+    root_path
+  end
+
 # Get locale from top-level domain or return nil if such locale is not available
 # You have to put something like:
 #   127.0.0.1 localanonynet.com

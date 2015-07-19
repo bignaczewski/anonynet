@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :comments
   resources :posts
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
   root 'home#index'
 
   get '/change_locale/:locale', to: 'settings#change_locale', as: :change_locale
@@ -12,6 +10,9 @@ Rails.application.routes.draw do
   resources 'contacts', only: [:new, :create]
 
   devise_for :users
+  resources :users
+  get 'like' => 'users#like'
+  get 'unlike' => 'users#unlike'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,4 +1,4 @@
-- if !user_signed_in?
+- if !current_user
   %li
     = link_to (t 'session.sign_in'), new_user_session_path
   %li

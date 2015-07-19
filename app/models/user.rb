@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   acts_as_liker
 
   has_many :posts
+  has_many :comments
 
   validates :nickname, presence: true
   validates :nickname, uniqueness: true, if: -> { self.nickname.present? }

@@ -6,7 +6,10 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      = link_to (t 'home'), root_path, class: 'navbar-brand'
+      - if !current_user
+        = link_to (t 'home'), root_path, class: 'navbar-brand'
+      - else
+        = link_to (t 'home'), posts_path, class: 'navbar-brand'
     .collapse.navbar-collapse
       %ul.nav.navbar-nav
         = render 'layouts/navigation_links_left'
