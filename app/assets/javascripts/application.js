@@ -11,15 +11,16 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
-//= require imageloaded.pkgd.min
-//= require masonry.pkgd.min
+//= require imageloaded.pkgd.min.js
+//= require masonry.pkgd.min.js
 //= require bootstrap-sprockets
+//= require turbolinks
 //= require_tree .
 
-//$(document).ready(function () { // wrong choice considering turbolinks
-$(document).on('ready page:load', function () {
+$(document).ready(function () { // wrong choice considering turbolinks. but works if jquery_turbolinks is in gemfile
+//$(document).on('ready page:load', function () { // needless if jquery_turbolink exist
 
     var container = document.querySelector('#masonry');
     var msnry = new Masonry(container, {
