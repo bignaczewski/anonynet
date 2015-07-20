@@ -42,8 +42,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @comments = Comment.where(post_id: @post.id)
-    @comments.each { |o| o.destroy }
     @post.destroy
     respond_with(@post)
   end
