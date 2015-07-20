@@ -1,32 +1,11 @@
 {
   "files": {
-    "imageloaded.pkgd.min-cff307d799459708e1a0b891199e2721968454181763e035bcfcb4c22e38b655.js": {
-      "logical_path": "imageloaded.pkgd.min.js",
-      "mtime": "2015-07-20T15:08:03+02:00",
-      "size": 6942,
-      "digest": "cff307d799459708e1a0b891199e2721968454181763e035bcfcb4c22e38b655",
-      "integrity": "sha256-z/MH15lFlwjhoLiRGZ4nIZaEVBgXY+A1vPy0wi44tlU="
-    },
-    "masonry.pkgd.min-be69446341468274f44bc67d5e1c52c78c6f6f12dae2c60558d2877f1bd13ce3.js": {
+    "masonry.pkgd.min-2c36eebe06136b2cbdc0034849eee550eef0e418b118dc4ff96d0f2e2d4f8e24.js": {
       "logical_path": "masonry.pkgd.min.js",
       "mtime": "2015-07-20T15:08:03+02:00",
       "size": 26178,
-      "digest": "be69446341468274f44bc67d5e1c52c78c6f6f12dae2c60558d2877f1bd13ce3",
-      "integrity": "sha256-vmlEY0FGgnT0S8Z9XhxSx4xvbxLa4sYFWNKHfxvRPOM="
-    },
-    "application-572f9c786e0dc7251911ead97c6cf05aa493ddd460efda80faadbf134e6f84e2.js": {
-      "logical_path": "application.js",
-      "mtime": "2015-07-20T23:44:23+02:00",
-      "size": 200557,
-      "digest": "572f9c786e0dc7251911ead97c6cf05aa493ddd460efda80faadbf134e6f84e2",
-      "integrity": "sha256-Vy+ceG4NxyUZEerZfGzwWqST3dRg79qA+q2/E05vhOI="
-    },
-    "application-9b72d729a2430f7a458665e42c405ea9b57030893329f196323689e10118f607.css": {
-      "logical_path": "application.css",
-      "mtime": "2015-07-20T23:44:23+02:00",
-      "size": 265385,
-      "digest": "9b72d729a2430f7a458665e42c405ea9b57030893329f196323689e10118f607",
-      "integrity": "sha256-m3LXKaJDD3pFhmXkLEBeqbVwMIkzKfGWMjaJ4QEY9gc="
+      "digest": "2c36eebe06136b2cbdc0034849eee550eef0e418b118dc4ff96d0f2e2d4f8e24",
+      "integrity": "sha256-LDbuvgYTayy9wANISe7lUO7w5BixGNxP+W0PLi1PjiQ="
     },
     "bootstrap/glyphicons-halflings-regular-13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407.eot": {
       "logical_path": "bootstrap/glyphicons-halflings-regular.eot",
@@ -65,10 +44,7 @@
     }
   },
   "assets": {
-    "imageloaded.pkgd.min.js": "imageloaded.pkgd.min-cff307d799459708e1a0b891199e2721968454181763e035bcfcb4c22e38b655.js",
-    "masonry.pkgd.min.js": "masonry.pkgd.min-be69446341468274f44bc67d5e1c52c78c6f6f12dae2c60558d2877f1bd13ce3.js",
-    "application.js": "application-572f9c786e0dc7251911ead97c6cf05aa493ddd460efda80faadbf134e6f84e2.js",
-    "application.css": "application-9b72d729a2430f7a458665e42c405ea9b57030893329f196323689e10118f607.css",
+    "masonry.pkgd.min.js": "masonry.pkgd.min-2c36eebe06136b2cbdc0034849eee550eef0e418b118dc4ff96d0f2e2d4f8e24.js",
     "bootstrap/glyphicons-halflings-regular.eot": "bootstrap/glyphicons-halflings-regular-13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407.eot",
     "bootstrap/glyphicons-halflings-regular.svg": "bootstrap/glyphicons-halflings-regular-42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5.svg",
     "bootstrap/glyphicons-halflings-regular.ttf": "bootstrap/glyphicons-halflings-regular-e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456.ttf",
