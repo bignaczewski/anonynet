@@ -8,11 +8,6 @@ class PostsController < ApplicationController
   def index
     page = params[:page] ? params[:page] : 1
     @posts = Post.order('created_at desc').page(page).per_page(32)
-
-    respond_to do |format|
-      format.html
-      format.js
-    end
   end
 
   # GET /posts/1
@@ -21,12 +16,6 @@ class PostsController < ApplicationController
     @comment = Comment.new
     @post = Post.find(params[:id])
     @comments = @post.comments
-
-    respond_to do |format|
-      format.js
-      format.html
-      format.json { render json: @post }
-    end
   end
 
   # GET /posts/new
@@ -63,22 +52,10 @@ class PostsController < ApplicationController
     @comment = Comment.new
     @post = Post.find(params[:id])
     @comments = @post.comments
-
-    respond_to do |format|
-      format.js
-      format.html
-      format.json { render json: @post }
-    end
   end
 
   def hide_comments
     @post = Post.find(params[:id])
-
-    respond_to do |format|
-      format.js
-      format.html
-      format.json { render json: @post }
-    end
   end
 
   private

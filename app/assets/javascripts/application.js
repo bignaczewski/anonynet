@@ -18,7 +18,8 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-$(document).ready(function () {
+//$(document).ready(function () { // wrong choice considering turbolinks
+$(document).on('ready page:load', function () {
 
     var container = document.querySelector('#masonry');
     var msnry = new Masonry(container, {
@@ -29,7 +30,5 @@ $(document).ready(function () {
     imagesLoaded(container, function () {
         msnry = new Masonry(container);
     });
-
-    $("#masonry").masonry();
 
 });
