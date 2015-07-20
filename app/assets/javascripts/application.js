@@ -13,8 +13,12 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require i18n
 //= require imageloaded.pkgd.min.js
 //= require masonry.pkgd.min.js
+//= require refile
+//= require nprogress
+//= require nprogress-turbolinks
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .

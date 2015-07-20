@@ -10,6 +10,6 @@
     = f.label t('posts.content')
     = f.text_area :content
   .field
-    = f.file_field :image_content
+    = f.attachment_field :image_content, direct: true
   .actions
     = f.submit t('posts.share')

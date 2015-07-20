@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
@@ -40,6 +41,7 @@ gem 'mail_form'
 
 gem 'rails-i18n'
 gem 'i18n-language-translations'
+gem 'i18n-coffee'
 
 # Pagination
 gem 'will_paginate'
@@ -59,8 +61,11 @@ gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 # For following, liking and mentioning
 gem 'socialization'
 
-# Adding images to posts
-gem 'paperclip'
+# Upload images to posts with better UX
+gem 'refile', require: 'refile/rails'
+gem 'refile-mini_magick'
+gem 'refile-postgres'
+gem 'nprogress-rails'
 
 # For seeding the db
 gem 'betterlorem'

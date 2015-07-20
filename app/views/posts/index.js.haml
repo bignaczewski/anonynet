@@ -8,3 +8,7 @@ $('#masonry').masonry('appended',$boxes);
   $('.pagination').replaceWith('#{j will_paginate(@posts)}');
 - else
   $('.pagination').remove();
+
+imagesLoaded(container, function () {
+msnry = new Masonry(container);
+});

@@ -3,8 +3,8 @@
     = link_to 'destroy', post, method: :delete
   .content
     =post.content_html
-  - if post.image_content.exists?
-    =image_tag(post.image_content, :class => 'img-rounded img-responsive', :width => 400, :height => 400)
+  - if post.image_content_id
+    =image_tag attachment_url(post, :image_content, :fill, 300, 300)
   %div{class: "#{post.class}-#{post.id}"}
     =render 'shared/like_form', likeable: post
     .comments{id: "link_to-#{post.id}"}

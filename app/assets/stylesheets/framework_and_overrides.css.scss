@@ -251,3 +251,9 @@ fieldset input:focus + .field-help {
 .pagination {
   //display: none !important;
 }
+
+.attachment.post.image_content {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}

@@ -1,7 +1,8 @@
 %p#notice= notice
 %p
   = @post.content_html
-= image_tag @post.image_content.url if @post.image_content.exists?
+- if @post.image_content_id
+  =image_tag attachment_url(@post, :image_content, :fill, 300, 300)
 %div{:class => "#{@post.class}-#{@post.id}"}
   = render 'shared/like_form', likeable: @post
   = link_to pluralize(@comments.count, I18n.t('posts.comment')), @post, class: 'comments'

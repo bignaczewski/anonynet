@@ -71,6 +71,8 @@ pl:
     likes: "polubienia"
     hide_comments: "Ukryj komentarze"
     show_comments: "Pokaż komentarze"
+    uploading_file: "Przesyłanie pliku..."
+    file_uploaded: "Udostępnij. Plik przesłano"
   date:
     abbr_day_names:
       - nie

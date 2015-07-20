@@ -42,12 +42,9 @@ ActiveRecord::Schema.define(version: 20150719172827) do
   create_table "posts", force: :cascade do |t|
     t.integer  "user_id"
     t.text     "content"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.string   "image_content_file_name"
-    t.string   "image_content_content_type"
-    t.integer  "image_content_file_size"
-    t.datetime "image_content_updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image_content_id"
     t.text     "content_html"
   end
 
