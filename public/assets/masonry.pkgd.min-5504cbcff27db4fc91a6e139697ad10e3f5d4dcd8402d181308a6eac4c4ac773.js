@@ -19,11 +19,11 @@
         function o(e, n) {
             t.fn[e] = function (o) {
                 if ("string" == typeof o) {
-                    for (var s = i.call(arguments, 1), a = 0, u = this.length; u > a; a++) {
-                        var h = this[a], p = t.data(h, e);
-                        if (p)if (t.isFunction(p[o]) && "_" !== o.charAt(0)) {
-                            var f = p[o].apply(p, s);
-                            if (void 0 !== f)return f
+                    for (var s = i.call(arguments, 1), a = 0, l = this.length; l > a; a++) {
+                        var u = this[a], c = t.data(u, e);
+                        if (c)if (t.isFunction(c[o]) && "_" !== o.charAt(0)) {
+                            var d = c[o].apply(c, s);
+                            if (void 0 !== d)return d
                         } else r("no such method '" + o + "' for " + e + " instance"); else r("cannot call methods on " + e + " prior to initialization; attempted to call '" + o + "'")
                     }
                     return this
@@ -218,10 +218,10 @@
 
     function o(n) {
         function o() {
-            if (!c) {
-                c = !0;
+            if (!h) {
+                h = !0;
                 var i = t.getComputedStyle;
-                if (h = function () {
+                if (u = function () {
                         var t = i ? function (t) {
                             return i(t, null)
                         } : function (t) {
@@ -231,43 +231,43 @@
                             var n = t(e);
                             return n || r("Style returned " + n + ". Are you running this code in a hidden iframe on Firefox? See http://bit.ly/getsizebug1"), n
                         }
-                    }(), p = n("boxSizing")) {
+                    }(), c = n("boxSizing")) {
                     var o = document.createElement("div");
-                    o.style.width = "200px", o.style.padding = "1px 2px 3px 4px", o.style.borderStyle = "solid", o.style.borderWidth = "1px 2px 3px 4px", o.style[p] = "border-box";
+                    o.style.width = "200px", o.style.padding = "1px 2px 3px 4px", o.style.borderStyle = "solid", o.style.borderWidth = "1px 2px 3px 4px", o.style[c] = "border-box";
                     var s = document.body || document.documentElement;
                     s.appendChild(o);
-                    var a = h(o);
-                    f = 200 === e(a.width), s.removeChild(o)
+                    var a = u(o);
+                    d = 200 === e(a.width), s.removeChild(o)
                 }
             }
         }
 
         function a(t) {
             if (o(), "string" == typeof t && (t = document.querySelector(t)), t && "object" == typeof t && t.nodeType) {
-                var n = h(t);
+                var n = u(t);
                 if ("none" === n.display)return i();
                 var r = {};
                 r.width = t.offsetWidth, r.height = t.offsetHeight;
-                for (var a = r.isBorderBox = !(!p || !n[p] || "border-box" !== n[p]), c = 0, d = s.length; d > c; c++) {
-                    var l = s[c], m = n[l];
-                    m = u(t, m);
-                    var y = parseFloat(m);
-                    r[l] = isNaN(y) ? 0 : y
+                for (var a = r.isBorderBox = !(!c || !n[c] || "border-box" !== n[c]), h = 0, p = s.length; p > h; h++) {
+                    var f = s[h], m = n[f];
+                    m = l(t, m);
+                    var g = parseFloat(m);
+                    r[f] = isNaN(g) ? 0 : g
                 }
-                var v = r.paddingLeft + r.paddingRight, g = r.paddingTop + r.paddingBottom, E = r.marginLeft + r.marginRight, L = r.marginTop + r.marginBottom, b = r.borderLeftWidth + r.borderRightWidth, _ = r.borderTopWidth + r.borderBottomWidth, x = a && f, z = e(n.width);
-                z !== !1 && (r.width = z + (x ? 0 : v + b));
-                var w = e(n.height);
-                return w !== !1 && (r.height = w + (x ? 0 : g + _)), r.innerWidth = r.width - (v + b), r.innerHeight = r.height - (g + _), r.outerWidth = r.width + E, r.outerHeight = r.height + L, r
+                var v = r.paddingLeft + r.paddingRight, y = r.paddingTop + r.paddingBottom, b = r.marginLeft + r.marginRight, x = r.marginTop + r.marginBottom, w = r.borderLeftWidth + r.borderRightWidth, E = r.borderTopWidth + r.borderBottomWidth, T = a && d, C = e(n.width);
+                C !== !1 && (r.width = C + (T ? 0 : v + w));
+                var S = e(n.height);
+                return S !== !1 && (r.height = S + (T ? 0 : y + E)), r.innerWidth = r.width - (v + w), r.innerHeight = r.height - (y + E), r.outerWidth = r.width + b, r.outerHeight = r.height + x, r
             }
         }
 
-        function u(e, n) {
+        function l(e, n) {
             if (t.getComputedStyle || -1 === n.indexOf("%"))return n;
             var i = e.style, o = i.left, r = e.runtimeStyle, s = r && r.left;
             return s && (r.left = e.currentStyle.left), i.left = n, n = i.pixelLeft, i.left = o, s && (r.left = s), n
         }
 
-        var h, p, f, c = !1;
+        var u, c, d, h = !1;
         return a
     }
 
@@ -305,8 +305,8 @@
         }
     }();
     if (s) {
-        var a = document.createElement("div"), u = e(a, "div");
-        r = u ? e : o
+        var a = document.createElement("div"), l = e(a, "div");
+        r = l ? e : o
     } else r = i;
     "function" == typeof define && define.amd ? define("matches-selector/matches-selector", [], function () {
         return r
@@ -333,14 +333,14 @@
             t && (this.element = t, this.layout = e, this.position = {x: 0, y: 0}, this._create())
         }
 
-        var u = r("transition"), h = r("transform"), p = u && h, f = !!r("perspective"), c = {
+        var l = r("transition"), u = r("transform"), c = l && u, d = !!r("perspective"), h = {
             WebkitTransition: "webkitTransitionEnd",
             MozTransition: "transitionend",
             OTransition: "otransitionend",
             transition: "transitionend"
-        }[u], d = ["transform", "transition", "transitionDuration", "transitionProperty"], l = function () {
-            for (var t = {}, e = 0, n = d.length; n > e; e++) {
-                var i = d[e], o = r(i);
+        }[l], p = ["transform", "transition", "transitionDuration", "transitionProperty"], f = function () {
+            for (var t = {}, e = 0, n = p.length; n > e; e++) {
+                var i = p[e], o = r(i);
                 o && o !== i && (t[i] = o)
             }
             return t
@@ -355,7 +355,7 @@
         }, a.prototype.css = function (t) {
             var e = this.element.style;
             for (var n in t) {
-                var i = l[n] || n;
+                var i = f[n] || n;
                 e[i] = t[n]
             }
         }, a.prototype.getPosition = function () {
@@ -367,7 +367,7 @@
             var t = this.layout.size, e = this.layout.options, n = {};
             e.isOriginLeft ? (n.left = this.position.x + t.paddingLeft + "px", n.right = "") : (n.right = this.position.x + t.paddingRight + "px", n.left = ""), e.isOriginTop ? (n.top = this.position.y + t.paddingTop + "px", n.bottom = "") : (n.bottom = this.position.y + t.paddingBottom + "px", n.top = ""), this.css(n), this.emitEvent("layout", [this])
         };
-        var m = f ? function (t, e) {
+        var m = d ? function (t, e) {
             return "translate3d(" + t + "px, " + e + "px, 0)"
         } : function (t, e) {
             return "translate(" + t + "px, " + e + "px)"
@@ -376,15 +376,15 @@
             this.getPosition();
             var n = this.position.x, i = this.position.y, o = parseInt(t, 10), r = parseInt(e, 10), s = o === this.position.x && r === this.position.y;
             if (this.setPosition(t, e), s && !this.isTransitioning)return void this.layoutPosition();
-            var a = t - n, u = e - i, h = {}, p = this.layout.options;
-            a = p.isOriginLeft ? a : -a, u = p.isOriginTop ? u : -u, h.transform = m(a, u), this.transition({
-                to: h,
+            var a = t - n, l = e - i, u = {}, c = this.layout.options;
+            a = c.isOriginLeft ? a : -a, l = c.isOriginTop ? l : -l, u.transform = m(a, l), this.transition({
+                to: u,
                 onTransitionEnd: {transform: this.layoutPosition},
                 isCleaning: !0
             })
         }, a.prototype.goTo = function (t, e) {
             this.setPosition(t, e), this.layoutPosition()
-        }, a.prototype.moveTo = p ? a.prototype._transitionTo : a.prototype.goTo, a.prototype.setPosition = function (t, e) {
+        }, a.prototype.moveTo = c ? a.prototype._transitionTo : a.prototype.goTo, a.prototype.setPosition = function (t, e) {
             this.position.x = parseInt(t, 10), this.position.y = parseInt(e, 10)
         }, a.prototype._nonTransition = function (t) {
             this.css(t.to), t.isCleaning && this._removeStyles(t.to);
@@ -401,13 +401,13 @@
             }
             this.enableTransition(t.to), this.css(t.to), this.isTransitioning = !0
         };
-        var y = h && i(h) + ",opacity";
+        var g = u && i(u) + ",opacity";
         a.prototype.enableTransition = function () {
             this.isTransitioning || (this.css({
-                transitionProperty: y,
+                transitionProperty: g,
                 transitionDuration: this.layout.options.transitionDuration
-            }), this.element.addEventListener(c, this, !1))
-        }, a.prototype.transition = a.prototype[u ? "_transition" : "_nonTransition"], a.prototype.onwebkitTransitionEnd = function (t) {
+            }), this.element.addEventListener(h, this, !1))
+        }, a.prototype.transition = a.prototype[l ? "_transition" : "_nonTransition"], a.prototype.onwebkitTransitionEnd = function (t) {
             this.ontransitionend(t)
         }, a.prototype.onotransitionend = function (t) {
             this.ontransitionend(t)
@@ -423,19 +423,19 @@
                 this.emitEvent("transitionEnd", [this])
             }
         }, a.prototype.disableTransition = function () {
-            this.removeTransitionStyles(), this.element.removeEventListener(c, this, !1), this.isTransitioning = !1
+            this.removeTransitionStyles(), this.element.removeEventListener(h, this, !1), this.isTransitioning = !1
         }, a.prototype._removeStyles = function (t) {
             var e = {};
             for (var n in t)e[n] = "";
             this.css(e)
         };
-        var g = {transitionProperty: "", transitionDuration: ""};
+        var y = {transitionProperty: "", transitionDuration: ""};
         return a.prototype.removeTransitionStyles = function () {
-            this.css(g)
+            this.css(y)
         }, a.prototype.removeElem = function () {
             this.element.parentNode.removeChild(this.element), this.emitEvent("remove", [this])
         }, a.prototype.remove = function () {
-            if (!u || !parseFloat(this.layout.options.transitionDuration))return void this.removeElem();
+            if (!l || !parseFloat(this.layout.options.transitionDuration))return void this.removeElem();
             var t = this;
             this.on("transitionEnd", function () {
                 return t.removeElem(), !0
@@ -475,7 +475,7 @@
     }
 
     function n(t) {
-        return "[object Array]" === f.call(t)
+        return "[object Array]" === d.call(t)
     }
 
     function i(t) {
@@ -485,7 +485,7 @@
     }
 
     function o(t, e) {
-        var n = d(e, t);
+        var n = p(e, t);
         -1 !== n && e.splice(n, 1)
     }
 
@@ -495,16 +495,16 @@
         }).toLowerCase()
     }
 
-    function s(n, s, f, d, l, m) {
-        function y(t, n) {
-            if ("string" == typeof t && (t = a.querySelector(t)), !t || !c(t))return void(u && u.error("Bad " + this.constructor.namespace + " element: " + t));
+    function s(n, s, d, p, f, m) {
+        function g(t, n) {
+            if ("string" == typeof t && (t = a.querySelector(t)), !t || !h(t))return void(l && l.error("Bad " + this.constructor.namespace + " element: " + t));
             this.element = t, this.options = e({}, this.constructor.defaults), this.option(n);
             var i = ++v;
-            this.element.outlayerGUID = i, g[i] = this, this._create(), this.options.isInitLayout && this.layout()
+            this.element.outlayerGUID = i, y[i] = this, this._create(), this.options.isInitLayout && this.layout()
         }
 
-        var v = 0, g = {};
-        return y.namespace = "outlayer", y.Item = m, y.defaults = {
+        var v = 0, y = {};
+        return g.namespace = "outlayer", g.Item = m, g.defaults = {
             containerStyle: {position: "relative"},
             isInitLayout: !0,
             isOriginLeft: !0,
@@ -514,51 +514,51 @@
             transitionDuration: "0.4s",
             hiddenStyle: {opacity: 0, transform: "scale(0.001)"},
             visibleStyle: {opacity: 1, transform: "scale(1)"}
-        }, e(y.prototype, f.prototype), y.prototype.option = function (t) {
+        }, e(g.prototype, d.prototype), g.prototype.option = function (t) {
             e(this.options, t)
-        }, y.prototype._create = function () {
+        }, g.prototype._create = function () {
             this.reloadItems(), this.stamps = [], this.stamp(this.options.stamp), e(this.element.style, this.options.containerStyle), this.options.isResizeBound && this.bindResize()
-        }, y.prototype.reloadItems = function () {
+        }, g.prototype.reloadItems = function () {
             this.items = this._itemize(this.element.children)
-        }, y.prototype._itemize = function (t) {
+        }, g.prototype._itemize = function (t) {
             for (var e = this._filterFindItemElements(t), n = this.constructor.Item, i = [], o = 0, r = e.length; r > o; o++) {
                 var s = e[o], a = new n(s, this);
                 i.push(a)
             }
             return i
-        }, y.prototype._filterFindItemElements = function (t) {
+        }, g.prototype._filterFindItemElements = function (t) {
             t = i(t);
             for (var e = this.options.itemSelector, n = [], o = 0, r = t.length; r > o; o++) {
                 var s = t[o];
-                if (c(s))if (e) {
-                    l(s, e) && n.push(s);
-                    for (var a = s.querySelectorAll(e), u = 0, h = a.length; h > u; u++)n.push(a[u])
+                if (h(s))if (e) {
+                    f(s, e) && n.push(s);
+                    for (var a = s.querySelectorAll(e), l = 0, u = a.length; u > l; l++)n.push(a[l])
                 } else n.push(s)
             }
             return n
-        }, y.prototype.getItemElements = function () {
+        }, g.prototype.getItemElements = function () {
             for (var t = [], e = 0, n = this.items.length; n > e; e++)t.push(this.items[e].element);
             return t
-        }, y.prototype.layout = function () {
+        }, g.prototype.layout = function () {
             this._resetLayout(), this._manageStamps();
             var t = void 0 !== this.options.isLayoutInstant ? this.options.isLayoutInstant : !this._isLayoutInited;
             this.layoutItems(this.items, t), this._isLayoutInited = !0
-        }, y.prototype._init = y.prototype.layout, y.prototype._resetLayout = function () {
+        }, g.prototype._init = g.prototype.layout, g.prototype._resetLayout = function () {
             this.getSize()
-        }, y.prototype.getSize = function () {
-            this.size = d(this.element)
-        }, y.prototype._getMeasurement = function (t, e) {
+        }, g.prototype.getSize = function () {
+            this.size = p(this.element)
+        }, g.prototype._getMeasurement = function (t, e) {
             var n, i = this.options[t];
-            i ? ("string" == typeof i ? n = this.element.querySelector(i) : c(i) && (n = i), this[t] = n ? d(n)[e] : i) : this[t] = 0
-        }, y.prototype.layoutItems = function (t, e) {
+            i ? ("string" == typeof i ? n = this.element.querySelector(i) : h(i) && (n = i), this[t] = n ? p(n)[e] : i) : this[t] = 0
+        }, g.prototype.layoutItems = function (t, e) {
             t = this._getItemsForLayout(t), this._layoutItems(t, e), this._postLayout()
-        }, y.prototype._getItemsForLayout = function (t) {
+        }, g.prototype._getItemsForLayout = function (t) {
             for (var e = [], n = 0, i = t.length; i > n; n++) {
                 var o = t[n];
                 o.isIgnored || e.push(o)
             }
             return e
-        }, y.prototype._layoutItems = function (t, e) {
+        }, g.prototype._layoutItems = function (t, e) {
             function n() {
                 i.emitEvent("layoutComplete", [i, t])
             }
@@ -567,47 +567,47 @@
             if (!t || !t.length)return void n();
             this._itemsOn(t, "layout", n);
             for (var o = [], r = 0, s = t.length; s > r; r++) {
-                var a = t[r], u = this._getItemLayoutPosition(a);
-                u.item = a, u.isInstant = e || a.isLayoutInstant, o.push(u)
+                var a = t[r], l = this._getItemLayoutPosition(a);
+                l.item = a, l.isInstant = e || a.isLayoutInstant, o.push(l)
             }
             this._processLayoutQueue(o)
-        }, y.prototype._getItemLayoutPosition = function () {
+        }, g.prototype._getItemLayoutPosition = function () {
             return {x: 0, y: 0}
-        }, y.prototype._processLayoutQueue = function (t) {
+        }, g.prototype._processLayoutQueue = function (t) {
             for (var e = 0, n = t.length; n > e; e++) {
                 var i = t[e];
                 this._positionItem(i.item, i.x, i.y, i.isInstant)
             }
-        }, y.prototype._positionItem = function (t, e, n, i) {
+        }, g.prototype._positionItem = function (t, e, n, i) {
             i ? t.goTo(e, n) : t.moveTo(e, n)
-        }, y.prototype._postLayout = function () {
+        }, g.prototype._postLayout = function () {
             this.resizeContainer()
-        }, y.prototype.resizeContainer = function () {
+        }, g.prototype.resizeContainer = function () {
             if (this.options.isResizingContainer) {
                 var t = this._getContainerSize();
                 t && (this._setContainerMeasure(t.width, !0), this._setContainerMeasure(t.height, !1))
             }
-        }, y.prototype._getContainerSize = p, y.prototype._setContainerMeasure = function (t, e) {
+        }, g.prototype._getContainerSize = c, g.prototype._setContainerMeasure = function (t, e) {
             if (void 0 !== t) {
                 var n = this.size;
                 n.isBorderBox && (t += e ? n.paddingLeft + n.paddingRight + n.borderLeftWidth + n.borderRightWidth : n.paddingBottom + n.paddingTop + n.borderTopWidth + n.borderBottomWidth), t = Math.max(t, 0), this.element.style[e ? "width" : "height"] = t + "px"
             }
-        }, y.prototype._itemsOn = function (t, e, n) {
+        }, g.prototype._itemsOn = function (t, e, n) {
             function i() {
                 return o++, o === r && n.call(s), !0
             }
 
-            for (var o = 0, r = t.length, s = this, a = 0, u = t.length; u > a; a++) {
-                var h = t[a];
-                h.on(e, i)
+            for (var o = 0, r = t.length, s = this, a = 0, l = t.length; l > a; a++) {
+                var u = t[a];
+                u.on(e, i)
             }
-        }, y.prototype.ignore = function (t) {
+        }, g.prototype.ignore = function (t) {
             var e = this.getItem(t);
             e && (e.isIgnored = !0)
-        }, y.prototype.unignore = function (t) {
+        }, g.prototype.unignore = function (t) {
             var e = this.getItem(t);
             e && delete e.isIgnored
-        }, y.prototype.stamp = function (t) {
+        }, g.prototype.stamp = function (t) {
             if (t = this._find(t)) {
                 this.stamps = this.stamps.concat(t);
                 for (var e = 0, n = t.length; n > e; e++) {
@@ -615,14 +615,14 @@
                     this.ignore(i)
                 }
             }
-        }, y.prototype.unstamp = function (t) {
+        }, g.prototype.unstamp = function (t) {
             if (t = this._find(t))for (var e = 0, n = t.length; n > e; e++) {
                 var i = t[e];
                 o(i, this.stamps), this.unignore(i)
             }
-        }, y.prototype._find = function (t) {
+        }, g.prototype._find = function (t) {
             return t ? ("string" == typeof t && (t = this.element.querySelectorAll(t)), t = i(t)) : void 0
-        }, y.prototype._manageStamps = function () {
+        }, g.prototype._manageStamps = function () {
             if (this.stamps && this.stamps.length) {
                 this._getBoundingRect();
                 for (var t = 0, e = this.stamps.length; e > t; t++) {
@@ -630,7 +630,7 @@
                     this._manageStamp(n)
                 }
             }
-        }, y.prototype._getBoundingRect = function () {
+        }, g.prototype._getBoundingRect = function () {
             var t = this.element.getBoundingClientRect(), e = this.size;
             this._boundingRect = {
                 left: t.left + e.paddingLeft + e.borderLeftWidth,
@@ -638,22 +638,22 @@
                 right: t.right - (e.paddingRight + e.borderRightWidth),
                 bottom: t.bottom - (e.paddingBottom + e.borderBottomWidth)
             }
-        }, y.prototype._manageStamp = p, y.prototype._getElementOffset = function (t) {
-            var e = t.getBoundingClientRect(), n = this._boundingRect, i = d(t), o = {
+        }, g.prototype._manageStamp = c, g.prototype._getElementOffset = function (t) {
+            var e = t.getBoundingClientRect(), n = this._boundingRect, i = p(t), o = {
                 left: e.left - n.left - i.marginLeft,
                 top: e.top - n.top - i.marginTop,
                 right: n.right - e.right - i.marginRight,
                 bottom: n.bottom - e.bottom - i.marginBottom
             };
             return o
-        }, y.prototype.handleEvent = function (t) {
+        }, g.prototype.handleEvent = function (t) {
             var e = "on" + t.type;
             this[e] && this[e](t)
-        }, y.prototype.bindResize = function () {
+        }, g.prototype.bindResize = function () {
             this.isResizeBound || (n.bind(t, "resize", this), this.isResizeBound = !0)
-        }, y.prototype.unbindResize = function () {
+        }, g.prototype.unbindResize = function () {
             this.isResizeBound && n.unbind(t, "resize", this), this.isResizeBound = !1
-        }, y.prototype.onresize = function () {
+        }, g.prototype.onresize = function () {
             function t() {
                 e.resize(), delete e.resizeTimeout
             }
@@ -661,41 +661,41 @@
             this.resizeTimeout && clearTimeout(this.resizeTimeout);
             var e = this;
             this.resizeTimeout = setTimeout(t, 100)
-        }, y.prototype.resize = function () {
+        }, g.prototype.resize = function () {
             this.isResizeBound && this.needsResizeLayout() && this.layout()
-        }, y.prototype.needsResizeLayout = function () {
-            var t = d(this.element), e = this.size && t;
+        }, g.prototype.needsResizeLayout = function () {
+            var t = p(this.element), e = this.size && t;
             return e && t.innerWidth !== this.size.innerWidth
-        }, y.prototype.addItems = function (t) {
+        }, g.prototype.addItems = function (t) {
             var e = this._itemize(t);
             return e.length && (this.items = this.items.concat(e)), e
-        }, y.prototype.appended = function (t) {
+        }, g.prototype.appended = function (t) {
             var e = this.addItems(t);
             e.length && (this.layoutItems(e, !0), this.reveal(e))
-        }, y.prototype.prepended = function (t) {
+        }, g.prototype.prepended = function (t) {
             var e = this._itemize(t);
             if (e.length) {
                 var n = this.items.slice(0);
                 this.items = e.concat(n), this._resetLayout(), this._manageStamps(), this.layoutItems(e, !0), this.reveal(e), this.layoutItems(n)
             }
-        }, y.prototype.reveal = function (t) {
+        }, g.prototype.reveal = function (t) {
             var e = t && t.length;
             if (e)for (var n = 0; e > n; n++) {
                 var i = t[n];
                 i.reveal()
             }
-        }, y.prototype.hide = function (t) {
+        }, g.prototype.hide = function (t) {
             var e = t && t.length;
             if (e)for (var n = 0; e > n; n++) {
                 var i = t[n];
                 i.hide()
             }
-        }, y.prototype.getItem = function (t) {
+        }, g.prototype.getItem = function (t) {
             for (var e = 0, n = this.items.length; n > e; e++) {
                 var i = this.items[e];
                 if (i.element === t)return i
             }
-        }, y.prototype.getItems = function (t) {
+        }, g.prototype.getItems = function (t) {
             if (t && t.length) {
                 for (var e = [], n = 0, i = t.length; i > n; n++) {
                     var o = t[n], r = this.getItem(o);
@@ -703,7 +703,7 @@
                 }
                 return e
             }
-        }, y.prototype.remove = function (t) {
+        }, g.prototype.remove = function (t) {
             t = i(t);
             var e = this.getItems(t);
             if (e && e.length) {
@@ -715,7 +715,7 @@
                     s.remove(), o(s, this.items)
                 }
             }
-        }, y.prototype.destroy = function () {
+        }, g.prototype.destroy = function () {
             var t = this.element.style;
             t.height = "", t.position = "", t.width = "";
             for (var e = 0, n = this.items.length; n > e; e++) {
@@ -724,39 +724,39 @@
             }
             this.unbindResize();
             var o = this.element.outlayerGUID;
-            delete g[o], delete this.element.outlayerGUID, h && h.removeData(this.element, this.constructor.namespace)
-        }, y.data = function (t) {
+            delete y[o], delete this.element.outlayerGUID, u && u.removeData(this.element, this.constructor.namespace)
+        }, g.data = function (t) {
             var e = t && t.outlayerGUID;
-            return e && g[e]
-        }, y.create = function (t, n) {
+            return e && y[e]
+        }, g.create = function (t, n) {
             function i() {
-                y.apply(this, arguments)
+                g.apply(this, arguments)
             }
 
-            return Object.create ? i.prototype = Object.create(y.prototype) : e(i.prototype, y.prototype), i.prototype.constructor = i, i.defaults = e({}, y.defaults), e(i.defaults, n), i.prototype.settings = {}, i.namespace = t, i.data = y.data, i.Item = function () {
+            return Object.create ? i.prototype = Object.create(g.prototype) : e(i.prototype, g.prototype), i.prototype.constructor = i, i.defaults = e({}, g.defaults), e(i.defaults, n), i.prototype.settings = {}, i.namespace = t, i.data = g.data, i.Item = function () {
                 m.apply(this, arguments)
             }, i.Item.prototype = new m, s(function () {
-                for (var e = r(t), n = a.querySelectorAll(".js-" + e), o = "data-" + e + "-options", s = 0, p = n.length; p > s; s++) {
-                    var f, c = n[s], d = c.getAttribute(o);
+                for (var e = r(t), n = a.querySelectorAll(".js-" + e), o = "data-" + e + "-options", s = 0, c = n.length; c > s; s++) {
+                    var d, h = n[s], p = h.getAttribute(o);
                     try {
-                        f = d && JSON.parse(d)
-                    } catch (l) {
-                        u && u.error("Error parsing " + o + " on " + c.nodeName.toLowerCase() + (c.id ? "#" + c.id : "") + ": " + l);
+                        d = p && JSON.parse(p)
+                    } catch (f) {
+                        l && l.error("Error parsing " + o + " on " + h.nodeName.toLowerCase() + (h.id ? "#" + h.id : "") + ": " + f);
                         continue
                     }
-                    var m = new i(c, f);
-                    h && h.data(c, t, m)
+                    var m = new i(h, d);
+                    u && u.data(h, t, m)
                 }
-            }), h && h.bridget && h.bridget(t, i), i
-        }, y.Item = m, y
+            }), u && u.bridget && u.bridget(t, i), i
+        }, g.Item = m, g
     }
 
-    var a = t.document, u = t.console, h = t.jQuery, p = function () {
-    }, f = Object.prototype.toString, c = "function" == typeof HTMLElement || "object" == typeof HTMLElement ? function (t) {
+    var a = t.document, l = t.console, u = t.jQuery, c = function () {
+    }, d = Object.prototype.toString, h = "function" == typeof HTMLElement || "object" == typeof HTMLElement ? function (t) {
         return t instanceof HTMLElement
     } : function (t) {
         return t && "object" == typeof t && 1 === t.nodeType && "string" == typeof t.nodeName
-    }, d = Array.prototype.indexOf ? function (t, e) {
+    }, p = Array.prototype.indexOf ? function (t, e) {
         return t.indexOf(e)
     } : function (t, e) {
         for (var n = 0, i = t.length; i > n; n++)if (t[n] === e)return n;
@@ -784,11 +784,11 @@
             t.getSize();
             var e = t.size.outerWidth % this.columnWidth, i = e && 1 > e ? "round" : "ceil", o = Math[i](t.size.outerWidth / this.columnWidth);
             o = Math.min(o, this.cols);
-            for (var r = this._getColGroup(o), s = Math.min.apply(Math, r), a = n(r, s), u = {
+            for (var r = this._getColGroup(o), s = Math.min.apply(Math, r), a = n(r, s), l = {
                 x: this.columnWidth * a,
                 y: s
-            }, h = s + t.size.outerHeight, p = this.cols + 1 - r.length, f = 0; p > f; f++)this.colYs[a + f] = h;
-            return u
+            }, u = s + t.size.outerHeight, c = this.cols + 1 - r.length, d = 0; c > d; d++)this.colYs[a + d] = u;
+            return l
         }, i.prototype._getColGroup = function (t) {
             if (2 > t)return this.colYs;
             for (var e = [], n = this.cols + 1 - t, i = 0; n > i; i++) {
@@ -801,7 +801,7 @@
             s = Math.max(0, s);
             var a = Math.floor(r / this.columnWidth);
             a -= r % this.columnWidth ? 0 : 1, a = Math.min(this.cols - 1, a);
-            for (var u = (this.options.isOriginTop ? i.top : i.bottom) + n.outerHeight, h = s; a >= h; h++)this.colYs[h] = Math.max(u, this.colYs[h])
+            for (var l = (this.options.isOriginTop ? i.top : i.bottom) + n.outerHeight, u = s; a >= u; u++)this.colYs[u] = Math.max(l, this.colYs[u])
         }, i.prototype._getContainerSize = function () {
             this.maxY = Math.max.apply(Math, this.colYs);
             var t = {height: this.maxY};
