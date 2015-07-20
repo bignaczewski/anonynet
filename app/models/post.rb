@@ -18,4 +18,8 @@ class Post < ActiveRecord::Base
     simple_format
   end
 
+  def self.orderpaginate(options)
+    # code here
+  end
+
 end

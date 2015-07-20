@@ -40,7 +40,8 @@ gem 'rails-i18n'
 gem 'i18n-language-translations'
 
 # Pagination
-gem 'kaminari'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 
 # haml instead of html.erb
 gem 'haml-rails'

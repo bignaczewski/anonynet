@@ -1,14 +1,18 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
-  respond_to :html
-  respond_to :js
+  respond_to :js, :html
 
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.order(created_at: :desc)
-    respond_with(@posts)
+    page = params[:page] ? params[:page] : 1
+    @posts = Post.order('created_at desc').page(page).per_page(32)
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   # GET /posts/1
@@ -19,7 +23,8 @@ class PostsController < ApplicationController
     @comments = @post.comments
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.js
+      format.html
       format.json { render json: @post }
     end
   end
@@ -48,6 +53,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @comments = Comment.where(post_id: @post.id)
+    @comments.each { |o| o.destroy }
     @post.destroy
     respond_with(@post)
   end

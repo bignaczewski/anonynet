@@ -13,5 +13,23 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require imageloaded.pkgd.min
+//= require masonry.pkgd.min
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).ready(function () {
+
+    var container = document.querySelector('#masonry');
+    var msnry = new Masonry(container, {
+        columnWidth: '.post',
+        itemSelector: '.post'
+    });
+
+    imagesLoaded(container, function () {
+        msnry = new Masonry(container);
+    });
+
+    $("#masonry").masonry();
+
+});

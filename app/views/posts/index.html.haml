@@ -1,30 +1,5 @@
-%h1 Listing posts
+#masonry
+  = render(@posts)
 
-- if current_user
-  = link_to 'New Post', new_post_path
-
-  %br
-  %br
-  %br
-
--@posts.each do |post|
-  .post{id: post.id}
-    .content
-      =post.content_html
-    - if post.image_content.exists?
-      =image_tag(post.image_content, :class => 'img-rounded img-responsive', :width => 400, :height => 400)
-    %div{class: "#{post.class}-#{post.id}"}
-      =render 'shared/like_form', likeable: post
-      .comments{id: "link_to-#{post.id}"}
-        =pluralize(post.comments.count, I18n.t('posts.comment'))
-      .likes
-        =pluralize(post.likers(User).count, I18n.t('posts.like'))
-    %div{id: "link-show-#{post.id}"}
-      =link_to (t('posts.show_comments')), show_comments_path(id: post.id), remote: true, data: {id: post.id}
-
-  %br
-  %br
-  %br
-  %br
-  %br
-  %br
+#infinite-scrolling
+  = will_paginate(@posts, renderer: BootstrapPagination::Rails)

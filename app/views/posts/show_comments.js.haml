@@ -1,2 +1,9 @@
 $(document.getElementById(#{@post.id})).append('#{j render partial: 'comment_partial'}');
 document.getElementById('link-show-#{@post.id}').style.display = 'none';
+
+var container = document.querySelector('#masonry');
+var msnry = new Masonry(container, {
+columnWidth: '.post',
+itemSelector: '.post'
+});
+msnry.reload();

@@ -193,3 +193,61 @@ fieldset input:focus + .field-help {
   max-height: 52px !important;
   height: 52px !important;
 }
+
+// Posts and masonry
+#masonry .post {
+  padding: 5px;
+  font-size: 12px;
+  line-height: 1.4em;
+  float: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px #444;
+  width: 24%;
+  height: auto;
+  margin: 5px;
+}
+
+#masonry .post img {
+  display: block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+}
+
+#masonry .post .content {
+  margin: 10px 0 5px;
+  width: 100%;
+  height: auto;
+}
+
+#masonry:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.video_youtube {
+  float: none;
+  clear: both;
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+
+.video_youtube iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pagination {
+  //display: none !important;
+}
