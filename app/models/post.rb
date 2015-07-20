@@ -5,9 +5,9 @@ class Post < ActiveRecord::Base
 
   acts_as_likeable
 
-  has_attached_file :image_content, :styles => {:medium => '300x300>', :thumb => '100x100>'}
+  has_attached_file :image_content, :styles => {:medium => '300x300>'}
   validates_attachment_content_type :image_content, :content_type => /\Aimage\/.*\Z/,
-                                    :size => {:in => 0..10.megabytes}
+                                    :size => {:in => 0..5.megabytes}
 
   auto_html_for :content do
     html_escape

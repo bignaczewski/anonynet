@@ -36,7 +36,7 @@ module ApplicationHelper
         params << "autoplay=1" if autoplay
         params << "rel=0" if hide_related
         src += "?#{params.join '&'}" unless params.empty?
-        %{<div class="video_youtube"><iframe width="#{width}" height="#{height}" src="#{src}" frameborder="#{frameborder}" allowfullscreen></iframe></div>}
+        %{<div class="video youtube"><iframe width="#{width}" height="#{height}" src="#{src}" frameborder="#{frameborder}" allowfullscreen></iframe></div>}
       end
     end
   end

@@ -6,3 +6,7 @@ var msnry = new Masonry(container, {
 columnWidth: '.post',
 itemSelector: '.post'
 });
+
+imagesLoaded(container, function () {
+msnry = new Masonry(container);
+});

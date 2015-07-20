@@ -204,7 +204,7 @@ fieldset input:focus + .field-help {
   -moz-border-radius: 5px;
   border-radius: 5px;
   box-shadow: 1px 1px 10px #444;
-  width: 24%;
+  width: 32%;
   height: auto;
   margin: 5px;
 }
@@ -230,7 +230,7 @@ fieldset input:focus + .field-help {
   clear: both;
 }
 
-.video_youtube {
+.video.youtube {
   float: none;
   clear: both;
   width: 100%;
@@ -240,7 +240,7 @@ fieldset input:focus + .field-help {
   height: 0;
 }
 
-.video_youtube iframe {
+.video.youtube iframe {
   position: absolute;
   top: 0;
   left: 0;
