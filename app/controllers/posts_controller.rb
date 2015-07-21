@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    # console
     new # for rendering new_post in index
     page = params[:page] ? params[:page] : 1
     if current_user and current_user.show_all

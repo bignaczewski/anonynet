@@ -1,7 +1,9 @@
-- if current_user and !current_user.banned
+- if current_user and !current_user.banned and !current_user.admin
   = render 'form'
 - elsif current_user and current_user.banned
   %p Zostałeś zbanowany. Skontaktuj się z adminem. nie mozesz sie socjalizować, twoich postów nie ma widocznych
+- elsif current_user.admin
+  %p Witam Panie Adminie
 - else
   %p nie jesteś zalogowany. możesz postować, ale brak socjalizacji i ludzie mogą to filtrować
   = render 'form'

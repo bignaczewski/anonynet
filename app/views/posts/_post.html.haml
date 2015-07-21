@@ -1,5 +1,5 @@
 .post{id: post.id}
-  - if current_user and post.user_id == current_user.id
+  - if (current_user and post.user_id == current_user.id) or current_user.admin
     = link_to 'destroy', post, method: :delete, remote: :true, data: { confirm: I18n.t('are_you_sure_to_destroy') }
   - elsif current_user and post.user_id != current_user.id
     = link_to 'report', report_post_path(id: post.id), method: :post, remote: :true, data: { confirm: I18n.t('are_you_sure_to_report_post') }

@@ -1,5 +1,5 @@
 .post{id: @post.id}
-  - if current_user and @post.user_id == current_user.id
+  - if (current_user and @post.user_id == current_user.id) or current_user.admin
     = link_to 'destroy', @post, method: :delete, remote: :true, data: { confirm: I18n.t('are_you_sure'), class: 'btn-danger' }
   .content
     =@post.content_html
