@@ -3,6 +3,8 @@ class Comment < ActiveRecord::Base
   belongs_to :post
   belongs_to :user
 
+  belongs_to :hidden_comment
+
   acts_as_likeable
 
   auto_html_for :content do

@@ -11,6 +11,10 @@ class PostsController < ApplicationController
     new if current_user # for rendering new_post in index
     page = params[:page] ? params[:page] : 1
     @posts = Post.order('created_at desc').page(page).per_page(18)
+    # binding.pry
+    # if current_user
+    #   @posts = Post.where.not(id: current_user.hidden_posts.post_id).order('created_at desc').page(page).per_page(18)
+    # end
   end
 
   # GET /posts/1

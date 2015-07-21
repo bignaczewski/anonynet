@@ -3,6 +3,8 @@ class Post < ActiveRecord::Base
   belongs_to :user
   has_many :comments, dependent: :destroy
 
+  belongs_to :hidden_post
+
   acts_as_likeable
 
   attachment :image_content, type: :image
