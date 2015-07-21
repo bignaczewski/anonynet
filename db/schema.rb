@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150720194700) do
+ActiveRecord::Schema.define(version: 20150721145046) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,21 @@ ActiveRecord::Schema.define(version: 20150720194700) do
   add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
   add_index "comments", ["users_id"], name: "index_comments_on_users_id", using: :btree
 
+  create_table "hidden_comments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "comment_id"
+  end
+
+  create_table "hidden_posts", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "post_id"
+  end
+
+  create_table "hidden_users", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "hidden_user_id"
+  end
+
   create_table "likes", force: :cascade do |t|
     t.string   "liker_type"
     t.integer  "liker_id"
@@ -42,13 +57,13 @@ ActiveRecord::Schema.define(version: 20150720194700) do
   create_table "posts", force: :cascade do |t|
     t.integer  "user_id"
     t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.text     "content_html"
-    t.string "image_content_id"
-    t.string "image_content_filename"
-    t.integer "image_content_size"
-    t.string "image_content_content_type"
+    t.string   "image_content_id"
+    t.string   "image_content_filename"
+    t.integer  "image_content_size"
+    t.string   "image_content_content_type"
   end
 
   create_table "refile_attachments", force: :cascade do |t|
@@ -63,6 +78,7 @@ ActiveRecord::Schema.define(version: 20150720194700) do
     t.datetime "remember_created_at"
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
+    t.boolean  "banned"
   end
 
   add_index "users", ["nickname"], name: "index_users_on_nickname", unique: true, using: :btree

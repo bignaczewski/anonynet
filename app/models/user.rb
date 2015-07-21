@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
 
   has_many :posts
   has_many :comments
+  has_many :hidden_posts
+  has_many :hidden_comments
+  has_many :hidden_users
 
   validates :nickname, presence: true
   validates :nickname, uniqueness: true, if: -> { self.nickname.present? }

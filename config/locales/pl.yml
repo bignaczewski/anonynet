@@ -30,7 +30,7 @@ pl:
       did_not_conf: "Nie otrzymano instrukcji dotyczących potwierdzenia konta?"
       did_not_unlock: "Nie otrzymano instrukcji dotyczących odblokowania konta?"
   edit: "Edytuj"
-  home: "Strona główna"
+  home: "Anonynet"
   update: "Aktualizuj"
   back: "Wróć"
   change_your_pass: "Zmień hasło"
