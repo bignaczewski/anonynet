@@ -54,6 +54,7 @@ gem 'bootstrap-sass'
 gem 'rails_layout'
 gem 'bootstrap-generators'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'twitter-bootstrap-rails-confirm'
 
 # Don't upload secrets.yml, use below instead
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'

@@ -1,4 +1,3 @@
-= @comment.save
 $(document.getElementById('comments-#{@post.id}')).append('#{j render(@comment)}');
 $('#submit-#{@post.id}').val('');
 $('#link_to-#{@post.id}').load(document.URL + ' #link_to-#{@post.id}');

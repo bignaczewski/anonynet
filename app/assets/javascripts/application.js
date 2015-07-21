@@ -21,6 +21,7 @@
 //= require nprogress
 //= require nprogress-turbolinks
 //= require bootstrap-sprockets
+//= require twitter/bootstrap/rails/confirm
 //= require turbolinks
 //= require_tree .
 

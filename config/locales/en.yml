@@ -303,3 +303,17 @@ en:
         zero: No %{model} found
     page_gap: "&hellip;"
     previous_label: "&#8592; Previous"
+  are_you_sure: "This action will cause post deletion"
+  helpers:
+    actions: "Actions"
+    links:
+      back: "Back"
+      cancel: "Cancel"
+      confirm: "Confirm"
+      destroy: "Delete"
+      new: "New"
+    titles:
+      edit: "Edit"
+      save: "Save"
+      new: "New"
+      delete: "Delete"

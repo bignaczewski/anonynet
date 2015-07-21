@@ -8,9 +8,6 @@ class CommentsController < ApplicationController
                            content_html: Obscenity.sanitize(params[:comment][:content]))
     @comment.users_id = current_user.id
     @comment.save
-    respond_to do |format|
-      format.js
-    end
+    respond_with(@comment)
   end
-
 end

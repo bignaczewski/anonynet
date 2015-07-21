@@ -339,3 +339,17 @@ pl:
         zero: Nie znaleziono %{model}
     page_gap: "&hellip;"
     previous_label: "&#8592; Poprzednia"
+  are_you_sure: "Ta akcja spowoduje usunięcie postu"
+  helpers:
+    actions: "Actions"
+    links:
+      back: "Back"
+      cancel: "Cancel"
+      confirm: "Confirm"
+      destroy: "Delete"
+      new: "New"
+    titles:
+      edit: "Edit"
+      save: "Save"
+      new: "New"
+      delete: "Delete"

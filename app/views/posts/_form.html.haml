@@ -8,8 +8,8 @@
 
   .field
     = f.label t('posts.content')
-    = f.text_area :content
-  .field
+    = f.text_area :content, :id => 'submit-new-post'
+  .field#attachment_field
     = f.attachment_field :image_content, direct: true
   .actions
     = f.submit t('posts.share')
