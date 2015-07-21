@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    new if current_user # for rendering new_post in index
     page = params[:page] ? params[:page] : 1
     @posts = Post.order('created_at desc').page(page).per_page(18)
   end

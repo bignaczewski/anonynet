@@ -1,4 +1,5 @@
-= link_to 'nowy post', new_post_path
+- if current_user
+  = render 'form'
 
 #masonry
   = render(@posts)
