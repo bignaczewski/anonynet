@@ -16,6 +16,7 @@
 //= require i18n
 //= require imageloaded.pkgd.min.js
 //= require masonry.pkgd.min.js
+//= require modenizr.js
 //= require refile
 //= require nprogress
 //= require nprogress-turbolinks
@@ -29,7 +30,8 @@ $(document).ready(function () { // wrong choice considering turbolinks. but work
     var container = document.querySelector('#masonry');
     var msnry = new Masonry(container, {
         columnWidth: '.post',
-        itemSelector: '.post'
+        itemSelector: '.post',
+        isAnimated: !Modernizr.csstransitions
     });
 
     imagesLoaded(container, function () {
