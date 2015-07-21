@@ -1,11 +1,15 @@
-%p#notice= notice
-%p
-  = @post.content_html
-- if @post.image_content_id
-  =image_tag attachment_url(@post, :image_content, :fill, 300, 300)
-%div{:class => "#{@post.class}-#{@post.id}"}
-  = render 'shared/like_form', likeable: @post
-  = link_to pluralize(@comments.count, I18n.t('posts.comment')), @post, class: 'comments'
-  .likes= pluralize(@post.likers(User).count, I18n.t('posts.like'))
-= render 'shared/form' if current_user
-= render @comments
+.post{id: @post.id}
+  - if current_user and @post.user_id == current_user.id
+    = link_to 'destroy', @post, method: :delete, remote: :true, data: { confirm: I18n.t('are_you_sure'), class: 'btn-danger' }
+  .content
+    =@post.content_html
+  - if @post.image_content_id
+    =image_tag attachment_url(@post, :image_content, :fill, 300, 300)
+  %div{class: "#{@post.class}-#{@post.id}"}
+    =render 'shared/like_form', likeable: @post
+    .comments{id: "link_to-#{@post.id}"}
+      =pluralize(@post.comments.count, I18n.t('posts.comment'))
+    .likes
+      =pluralize(@post.likers(User).count, I18n.t('posts.like'))
+  %div{id: "link-show-#{@post.id}"}
+    =link_to (t('posts.show_comments')), show_comments_path(id: @post.id), remote: true, data: {id: @post.id}

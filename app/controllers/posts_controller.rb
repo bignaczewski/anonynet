@@ -3,6 +3,8 @@ class PostsController < ApplicationController
 
   respond_to :js, :html
 
+  skip_before_filter :verify_authenticity_token, :only => [:create] # for image upload and AJAX
+
   # GET /posts
   # GET /posts.json
   def index
@@ -34,7 +36,10 @@ class PostsController < ApplicationController
     @post = Post.new(post_params, content_html: Obscenity.sanitize(post_params[:content]))
     @post.user_id = current_user.id
     @post.save
-    respond_with(@post)
+    respond_to do |format|
+      format.html { redirect_to posts_path }
+      format.js
+    end
   end
 
   def update
