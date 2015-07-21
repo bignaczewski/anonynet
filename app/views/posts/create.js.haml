@@ -1,0 +1,13 @@
+$(document.getElementById('masonry')).prepend('#{j render(@post)}');
+$(document.getElementById('submit-new-post')).val('');
+$(document.getElementById('attachment_field').firstElementChild).val('null');
+
+var container = document.querySelector('#masonry');
+var msnry = new Masonry(container, {
+columnWidth: '.post',
+itemSelector: '.post'
+});
+
+imagesLoaded(container, function () {
+msnry = new Masonry(container);
+});
