@@ -339,17 +339,20 @@ pl:
         zero: Nie znaleziono %{model}
     page_gap: "&hellip;"
     previous_label: "&#8592; Poprzednia"
-  are_you_sure: "Ta akcja spowoduje usunięcie postu"
+  are_you_sure_to_destroy: "Ta akcja spowoduje permanentne usunięcie postu"
+  are_you_sure_to_report_post: "Ta akcja spowoduje zgłoszenie posta do administratora i usunięcie go z Twojego widoku"
   helpers:
-    actions: "Actions"
+    actions: "Akcje"
     links:
-      back: "Back"
-      cancel: "Cancel"
-      confirm: "Confirm"
-      destroy: "Delete"
-      new: "New"
+      back: "Powrót"
+      cancel: "Anuluj"
+      confirm: "Potwierź"
+      destroy: "Usuń"
+      new: "Nowy"
     titles:
-      edit: "Edit"
-      save: "Save"
-      new: "New"
-      delete: "Delete"
+      edit: "Edytuj"
+      save: "Zapisz"
+      new: "Nowy"
+      delete: "Usuń"
+  report: "Zgłoś post do administratora i usuń ze swojego widoku"
+

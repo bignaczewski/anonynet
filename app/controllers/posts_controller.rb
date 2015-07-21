@@ -5,16 +5,28 @@ class PostsController < ApplicationController
 
   skip_before_filter :verify_authenticity_token, :only => [:create] # for image upload and AJAX
 
+  helper_method :check_if_comment_can_be_seen
+
   # GET /posts
   # GET /posts.json
   def index
-    new if current_user # for rendering new_post in index
+    new # for rendering new_post in index
     page = params[:page] ? params[:page] : 1
-    @posts = Post.order('created_at desc').page(page).per_page(18)
-    # binding.pry
-    # if current_user
-    #   @posts = Post.where.not(id: current_user.hidden_posts.post_id).order('created_at desc').page(page).per_page(18)
-    # end
+    if current_user and current_user.show_all
+      @posts = Post.where.not(user_id: User.where(banned: true).ids) # not banned
+                   .where.not(user_id: HiddenUser.where(user_id: current_user.id).pluck(:hidden_user_id)) # not hidden as user
+                   .where.not(id: current_user.hidden_posts.pluck(:post_id)) # not hidden as post
+                   .order('created_at desc').page(page).per_page(18)
+    elsif current_user and !current_user.show_all
+      @posts = Post.where.not(user_id: nil) #not anonymous
+                   .where.not(user_id: User.where(banned: true).ids)
+                   .where.not(user_id: HiddenUser.where(user_id: current_user.id).pluck(:hidden_user_id))
+                   .where.not(id: current_user.hidden_posts.pluck(:post_id))
+                   .order('created_at desc').page(page).per_page(18)
+    else
+      @posts = Post.where.not(user_id: User.where(banned: true).ids)
+                   .order('created_at desc').page(page).per_page(18)
+    end
   end
 
   # GET /posts/1
@@ -38,7 +50,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params, content_html: Obscenity.sanitize(post_params[:content]))
-    @post.user_id = current_user.id
+    @post.user_id = current_user.id if current_user
     @post.save
     respond_to do |format|
       format.html { redirect_to posts_path }
@@ -64,6 +76,30 @@ class PostsController < ApplicationController
 
   def hide_comments
     @post = Post.find(params[:id])
+  end
+
+  def report_post
+    @post = Post.find(params[:id])
+    hp = HiddenPost.new(user_id: current_user.id, post_id: @post.id)
+    hp.save
+
+    # below: if three combined comments and posts from user are equal 3 or more, this user will be hidden for current_user
+    if ((HiddenPost.where(user_id: current_user.id).where(post_id: Post.where(user_id: @post.user_id).ids)
+             .size+HiddenComment.where(user_id: current_user.id)
+                       .where(comment_id: Comment.where(users_id: @post.user_id).ids).size) >= 3)
+      hu = HiddenUser.new(user_id: current_user.id, hidden_user_id: @post.user_id)
+      hu.save
+
+      if HiddenUser.where(hidden_user_id: @post.user_id).size >= 3
+        bu = User.find(@post.user_id)
+        bu.banned = true
+        bu.save
+      end
+    end
+  end
+
+  def check_if_comment_can_be_seen(comment)
+
   end
 
   private

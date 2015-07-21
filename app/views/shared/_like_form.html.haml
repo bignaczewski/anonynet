@@ -1,4 +1,4 @@
-- if current_user
+- if current_user and !current_user.banned
   #like_form
     - if current_user.likes?(likeable)
       = render 'shared/unlike', likeable: likeable
