@@ -5,8 +5,6 @@ class PostsController < ApplicationController
 
   skip_before_filter :verify_authenticity_token, :only => [:create] # for image upload and AJAX
 
-  helper_method :check_if_comment_can_be_seen
-
   # GET /posts
   # GET /posts.json
   def index
@@ -96,10 +94,6 @@ class PostsController < ApplicationController
         bu.save
       end
     end
-  end
-
-  def check_if_comment_can_be_seen(comment)
-
   end
 
   private

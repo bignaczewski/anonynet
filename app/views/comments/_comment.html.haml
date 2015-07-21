@@ -1,7 +1,11 @@
 .comment
-  - if comment
+  - if comment and (check_if_comment_cannot_be_seen(comment) == false)
     %div
       = comment.content_html
     %div{:class => "#{comment.class}-#{comment.id}"}
       = render 'shared/like_form', likeable: comment
       .likes= pluralize(comment.likers(User).count, I18n.t('posts.like'))
+  - else
+    %div
+      %p Komentarz został oznaczony jako zbanowany
+      = check_if_comment_cannot_be_seen(comment)
