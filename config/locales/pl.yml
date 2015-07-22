@@ -73,6 +73,7 @@ pl:
     show_comments: "Pokaż komentarze"
     uploading_file: "Przesyłanie pliku..."
     file_uploaded: "Udostępnij. Plik przesłano"
+    keep_reading: "Czytaj dalej... nic tu nie ma :) - admin"
   date:
     abbr_day_names:
       - nie
@@ -341,6 +342,7 @@ pl:
     previous_label: "&#8592; Poprzednia"
   are_you_sure_to_destroy: "Ta akcja spowoduje permanentne usunięcie postu"
   are_you_sure_to_report_post: "Ta akcja spowoduje zgłoszenie posta do administratora i usunięcie go z Twojego widoku"
+  are_you_sure_to_report_comment: "Ta akcja spowoduje zgłoszenie komentarza do administratora i usunięcie go z Twojego widoku"
   helpers:
     actions: "Akcje"
     links:

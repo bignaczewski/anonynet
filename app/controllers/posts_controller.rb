@@ -73,7 +73,7 @@ class PostsController < ApplicationController
   def show_comments
     @comment = Comment.new
     @post = Post.find(params[:id])
-    @comments = @post.comments
+    @comments = @post.comments.order('created_at asc')
   end
 
   def hide_comments

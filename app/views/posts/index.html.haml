@@ -1,7 +1,7 @@
 - if current_user and !current_user.banned and !current_user.admin
   = render 'form'
 - elsif current_user and current_user.banned
-  %p Zostałeś zbanowany. Skontaktuj się z adminem. nie mozesz sie socjalizować, twoich postów nie ma widocznych
+  %p Zostałeś zbanowany. Skontaktuj się z adminem. nie mozesz sie socjalizować, twoje posty i komentarze nie sa widoczne
 - elsif current_user.try(:admin?)
   %p Witam Panie Adminie. Przejdź do swojego #{link_to 'panelu administratora', rails_admin_path}
 - else

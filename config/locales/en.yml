@@ -73,6 +73,7 @@ en:
     show_comments: "Show comments"
     uploading_file: "Uploading file..."
     file_uploaded: "Submit. File uploaded"
+    keep_reading: "Keep reading... nothing's here :) - admin"
   date:
     abbr_day_names:
       - Sun
@@ -305,6 +306,7 @@ en:
     previous_label: "&#8592; Previous"
   are_you_sure_to_destroy: "This action will cause permanent post deletion"
   are_you_sure_to_report_post: "This action will cause reporting this post to the administrator and removing it in your view"
+  are_you_sure_to_report_comment: "This action will cause reporting this comment to the administrator and removing it in your view"
   helpers:
     actions: "Actions"
     links:

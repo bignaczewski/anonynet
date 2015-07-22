@@ -1,10 +1,16 @@
-.comment
+%hr
+%p
+.comment{id: "#{comment.class}-#{comment.id}"}
   - if comment and (check_if_comment_cannot_be_seen(comment) == false)
+    - if current_user and !(comment.user_id and comment.user_id == current_user.id)
+      %div
+        = link_to 'report', report_comment_path(id: comment.id), method: :post, remote: :true, data: { confirm: I18n.t('are_you_sure_to_report_comment') }
     %div
       = comment.content_html
-    %div{:class => "#{comment.class}-#{comment.id}"}
+    %div{class: "#{comment.class}-#{comment.id}"}
       = render 'shared/like_form', likeable: comment
       .likes= pluralize(comment.likers(User).count, I18n.t('posts.like'))
   - else
     %div
-      %p Komentarz został oznaczony jako zbanowany
+      %p
+      = I18n.t('posts.keep_reading')

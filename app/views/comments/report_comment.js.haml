@@ -1,0 +1,15 @@
+-#$(document.getElementById('#{@comment.class}-#{@comment.id}')).val('#{I18n.t('posts.keep_reading')}').italics();
+var element = document.getElementById('#{@comment.class}-#{@comment.id}').getElementsByTagName('div');
+element[1].innerHTML = ('#{I18n.t('posts.keep_reading')}').italics();
+element[0].remove();
+element[2].remove();
+
+var container = document.querySelector('#masonry');
+var msnry = new Masonry(container, {
+columnWidth: '.post',
+itemSelector: '.post'
+});
+
+imagesLoaded(container, function () {
+msnry = new Masonry(container);
+});

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admins', as: 'rails_admin'
 
   resources :comments
+  post 'report_comment' => 'comments#report_comment', as: :report_comment
 
   resources :posts, except: :show
   get 'show_comments' => 'posts#show_comments', as: :show_comments
