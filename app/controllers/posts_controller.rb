@@ -13,24 +13,27 @@ class PostsController < ApplicationController
     page = params[:page] ? params[:page] : 1
     if current_user and current_user.show_all
       @posts = Post.where.not(user_id: User.where(banned: true).ids) # not banned
+                   .where.not(hidden: true) # not hidden globally
                    .where.not(user_id: HiddenUser.where(user_id: current_user.id).pluck(:hidden_user_id)) # not hidden as user
                    .where.not(id: current_user.hidden_posts.pluck(:post_id)) # not hidden as post
                    .order('created_at desc').page(page).per_page(18)
     elsif current_user and !current_user.show_all
       @posts = Post.where.not(user_id: nil) #not anonymous
                    .where.not(user_id: User.where(banned: true).ids)
+                   .where.not(hidden: true)
                    .where.not(user_id: HiddenUser.where(user_id: current_user.id).pluck(:hidden_user_id))
                    .where.not(id: current_user.hidden_posts.pluck(:post_id))
                    .order('created_at desc').page(page).per_page(18)
     else
       @posts = Post.where.not(user_id: User.where(banned: true).ids)
+                   .where.not(hidden: true)
                    .order('created_at desc').page(page).per_page(18)
     end
   end
 
   # GET /posts/1
   # GET /posts/1.json
-  def show
+  def show # TODO filtrowanie na podstawie tego co wyzej, o ile zrobisz show (np. przy notyfikacjach)
     @comment = Comment.new
     @post = Post.find(params[:id])
     @comments = @post.comments
@@ -94,6 +97,12 @@ class PostsController < ApplicationController
         bu.banned = true
         bu.save
       end
+    end
+
+    # to hide globally (for all users)
+    if HiddenPost.where(post_id: @post.id).size >= 3
+      @post.hidden=true
+      @post.save
     end
   end
 

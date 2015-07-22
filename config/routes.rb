@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :comments
-  resources :posts
+  resources :posts, except: :show
   get 'show_comments' => 'posts#show_comments', as: :show_comments
   get 'hide_comments' => 'posts#hide_comments', as: :hide_comments
   post 'report_post' => 'posts#report_post', as: :report_post
