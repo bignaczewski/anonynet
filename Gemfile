@@ -36,6 +36,7 @@ gem 'jquery-turbolinks'
 
 gem 'devise'
 gem 'simple_form'
+gem 'devise-i18n'
 
 gem 'mail_form'
 
@@ -44,8 +45,9 @@ gem 'i18n-language-translations'
 gem 'i18n-coffee'
 
 # Pagination
-gem 'will_paginate'
-gem 'will_paginate-bootstrap'
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
+gem 'kaminari-i18n'
 
 # haml instead of html.erb
 gem 'haml-rails'
@@ -76,6 +78,8 @@ gem 'auto_html'
 
 # For obscenity filtration
 gem 'obscenity'
+
+gem 'rails_admin'
 
 group :production do
   # For Heroku needs

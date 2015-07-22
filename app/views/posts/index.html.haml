@@ -2,8 +2,8 @@
   = render 'form'
 - elsif current_user and current_user.banned
   %p Zostałeś zbanowany. Skontaktuj się z adminem. nie mozesz sie socjalizować, twoich postów nie ma widocznych
-- elsif current_user and current_user.admin
-  %p Witam Panie Adminie
+- elsif current_user.try(:admin?)
+  %p Witam Panie Adminie. Przejdź do swojego #{link_to 'panelu administratora', rails_admin_path}
 - else
   %p nie jesteś zalogowany. możesz postować, ale brak socjalizacji i ludzie mogą to filtrować
   = render 'form'
@@ -12,4 +12,4 @@
   = render(@posts)
 
 #infinite-scrolling
-  = will_paginate(@posts, renderer: BootstrapPagination::Rails)
+  = paginate @posts, :theme => 'twitter-bootstrap-3'

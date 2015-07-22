@@ -1,21 +1,25 @@
 Rails.application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admins', as: 'rails_admin'
+
   resources :comments
+
   resources :posts, except: :show
   get 'show_comments' => 'posts#show_comments', as: :show_comments
   get 'hide_comments' => 'posts#hide_comments', as: :hide_comments
   post 'report_post' => 'posts#report_post', as: :report_post
-
-  root 'home#index'
 
   get '/change_locale/:locale', to: 'settings#change_locale', as: :change_locale
 
   resources 'contacts', only: [:new, :create]
 
   devise_for :users
+
   resources :users
   get 'like' => 'users#like'
   get 'unlike' => 'users#unlike'
+
+  root 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

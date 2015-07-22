@@ -16,18 +16,18 @@ class PostsController < ApplicationController
                    .where.not(hidden: true) # not hidden globally
                    .where.not(user_id: HiddenUser.where(user_id: current_user.id).pluck(:hidden_user_id)) # not hidden as user
                    .where.not(id: current_user.hidden_posts.pluck(:post_id)) # not hidden as post
-                   .order('created_at desc').page(page).per_page(18)
+                   .order('created_at desc').page(page).per(18)
     elsif current_user and !current_user.show_all
       @posts = Post.where.not(user_id: nil) #not anonymous
                    .where.not(user_id: User.where(banned: true).ids)
                    .where.not(hidden: true)
                    .where.not(user_id: HiddenUser.where(user_id: current_user.id).pluck(:hidden_user_id))
                    .where.not(id: current_user.hidden_posts.pluck(:post_id))
-                   .order('created_at desc').page(page).per_page(18)
+                   .order('created_at desc').page(page).per(18)
     else
       @posts = Post.where.not(user_id: User.where(banned: true).ids)
                    .where.not(hidden: true)
-                   .order('created_at desc').page(page).per_page(18)
+                   .order('created_at desc').page(page).per(18)
     end
   end
 

@@ -18,7 +18,11 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    posts_path
+    if !current_user.try(:admin?)
+      posts_path
+    else
+      rails_admin_path
+    end
   end
 
   def after_sign_out_path_for(resource_or_scope)
