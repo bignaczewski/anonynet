@@ -86,9 +86,9 @@ class PostsController < ApplicationController
     hp.save
 
     # below: if three combined comments and posts from user are equal 3 or more, this user will be hidden for current_user
-    if ((HiddenPost.where(user_id: current_user.id).where(post_id: Post.where(user_id: @post.user_id).ids)
-             .size+HiddenComment.where(user_id: current_user.id)
-                       .where(comment_id: Comment.where(users_id: @post.user_id).ids).size) >= 3)
+    if @post.user_id and ((HiddenPost.where(user_id: current_user.id).where(post_id: Post.where(user_id: @post.user_id).ids)
+                               .size+HiddenComment.where(user_id: current_user.id)
+                                         .where(comment_id: Comment.where(users_id: @post.user_id).ids).size) >= 3)
       hu = HiddenUser.new(user_id: current_user.id, hidden_user_id: @post.user_id)
       hu.save
 
