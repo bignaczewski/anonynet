@@ -1,4 +1,4 @@
-- if (current_user and !current_user.banned) || (!current_user and @post.user_id=nil)
+- if (current_user and !current_user.banned and !current_user.admin) || (!current_user and !@post.user_id)
   = form_for @comment, remote: true do |f|
     - if @comment.errors.any?
       #error_explanation
