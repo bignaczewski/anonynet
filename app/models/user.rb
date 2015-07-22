@@ -9,9 +9,13 @@ class User < ActiveRecord::Base
   has_many :comments
 
   has_many :hidden_posts
-  has_many :hidden_comments
+  has_many :posts, through: :hidden_posts
 
-  has_and_belongs_to_many :hidden_user
+  has_many :hidden_comments
+  has_many :comments, through: :hidden_comments
+
+  has_many :hidden_users
+  has_many :users, through: :hidden_users
 
   validates :nickname, presence: true
   validates :nickname, uniqueness: true, if: -> { self.nickname.present? }

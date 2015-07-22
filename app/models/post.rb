@@ -3,7 +3,8 @@ class Post < ActiveRecord::Base
   belongs_to :user
   has_many :comments, dependent: :destroy
 
-  belongs_to :hidden_post
+  has_many :hidden_posts
+  has_many :users, through: :hidden_posts
 
   acts_as_likeable
 

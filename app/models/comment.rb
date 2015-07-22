@@ -3,7 +3,8 @@ class Comment < ActiveRecord::Base
   belongs_to :post
   belongs_to :user
 
-  belongs_to :hidden_comment
+  has_many :hidden_comments
+  has_many :users, through: :hidden_comments
 
   acts_as_likeable
 
