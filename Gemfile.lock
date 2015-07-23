@@ -123,6 +123,10 @@ GEM
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
+    jquery-infinite-pages (0.2.0)
+      coffee-script
+      jquery-rails
+      railties (>= 3.1)
     jquery-rails (4.0.4)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -334,6 +338,7 @@ DEPENDENCIES
   i18n-coffee
   i18n-language-translations
   jbuilder (~> 2.0)
+  jquery-infinite-pages
   jquery-rails
   jquery-turbolinks
   kaminari

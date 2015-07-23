@@ -8,7 +8,7 @@
   %p nie jesteś zalogowany. możesz postować, ale brak socjalizacji i ludzie mogą to filtrować
   = render 'form'
 
-#masonry
-  = render(@posts)
-
-= paginate @posts, :theme => 'twitter-bootstrap-3'
+#masonry.endless-page
+  = render @posts
+  %p.pagination
+    = link_to_next_page @posts, 'More posts', remote: true

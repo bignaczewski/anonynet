@@ -248,10 +248,6 @@ fieldset input:focus + .field-help {
   height: 100%;
 }
 
-.pagination {
-  //display: none !important;
-}
-
 .attachment.post.image_content {
   position: fixed;
   left: 0px;
@@ -283,3 +279,10 @@ fieldset input:focus + .field-help {
   transition-property: left, right, top;
 }
 
+.pagination {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0px;
+  //display: none !important;
+}

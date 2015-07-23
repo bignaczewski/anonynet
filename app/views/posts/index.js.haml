@@ -1,3 +1,5 @@
+$("#{j render(@posts)}").appendTo($("#masonry"));
+
 var container = document.querySelector('#masonry');
 var msnry = new Masonry(container, {
 columnWidth: '.post',
@@ -8,3 +10,9 @@ isAnimated: !Modernizr.csstransitions
 imagesLoaded(container, function () {
 msnry = new Masonry(container);
 });
+
+- if @posts.last_page?
+  $('.pagination').html('#{I18n.t('posts.no_more_posts')}');
+- else
+  $('.pagination').remove();
+  $('#masonry').append("<p class=\"pagination\">#{j link_to_next_page(@posts, 'More posts', :remote => true)}</p>");

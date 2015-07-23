@@ -74,6 +74,7 @@ en:
     uploading_file: "Uploading file..."
     file_uploaded: "Submit. File uploaded"
     keep_reading: "Keep reading... nothing's here :) - admin"
+    no_more_posts: "No more posts to load"
   date:
     abbr_day_names:
       - Sun

@@ -49,6 +49,9 @@ gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem 'kaminari-i18n'
 
+# Infinite scroll
+gem 'jquery-infinite-pages'
+
 # haml instead of html.erb
 gem 'haml-rails'
 

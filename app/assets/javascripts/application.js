@@ -22,6 +22,7 @@
 //= require nprogress-turbolinks
 //= require bootstrap-sprockets
 //= require twitter/bootstrap/rails/confirm
+//= require jquery.infinite-pages
 //= require turbolinks
 //= require_tree .
 
