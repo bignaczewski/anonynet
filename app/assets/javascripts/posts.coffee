@@ -27,3 +27,4 @@ $(document).on 'upload:complete', 'form', (e) ->
     $(this).find('input[type=submit]').removeAttr 'disabled'
     NProgress.done()
   return
+
