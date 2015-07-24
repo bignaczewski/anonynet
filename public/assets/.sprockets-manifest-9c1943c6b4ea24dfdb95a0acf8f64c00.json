@@ -21,16 +21,23 @@
       "digest": "51fccc86260d15d25e26f4a044a7612310ee699eb7ab43377b70c9a77240312a",
       "integrity": "sha256-UfzMhiYNFdJeJvSgRKdhIxDuaZ63q0M3e3DJp3JAMSo="
     },
+    "bootstrap.file-input-95ce09f3bbc59adf85247deef57c02619982858819cd79a56b4ff98c83211126.js": {
+      "logical_path": "bootstrap.file-input.js",
+      "mtime": "2015-07-24T19:08:26+02:00",
+      "size": 1572,
+      "digest": "95ce09f3bbc59adf85247deef57c02619982858819cd79a56b4ff98c83211126",
+      "integrity": "sha256-lc4J87vFmt+FJH3u9XwCYZmChYgZzXmla0/5jIMhESY="
+    },
     "rails_admin/rails_admin-7723cc58acf2ec897be16e1f2fc59cbdd6b017f842e93c82ab3e81eb2bbfa811.js": {
       "logical_path": "rails_admin/rails_admin.js",
-      "mtime": "2015-07-23T14:34:34+02:00",
+      "mtime": "2015-07-24T21:53:37+02:00",
       "size": 363192,
       "digest": "7723cc58acf2ec897be16e1f2fc59cbdd6b017f842e93c82ab3e81eb2bbfa811",
       "integrity": "sha256-dyPMWKzy7Il74W4fL8WcvdawF/hC6TyCqz6B6yu/qBE="
     },
     "rails_admin/rails_admin-20c0a8873377bd85e0ff483a13ef6b4a82d2871c7c28f0fa7ed77d2319802cb2.css": {
       "logical_path": "rails_admin/rails_admin.css",
-      "mtime": "2015-07-23T14:34:34+02:00",
+      "mtime": "2015-07-24T21:53:37+02:00",
       "size": 173588,
       "digest": "20c0a8873377bd85e0ff483a13ef6b4a82d2871c7c28f0fa7ed77d2319802cb2",
       "integrity": "sha256-IMCohzN3vYXg/0g6E+9rSoLShxx8KPD6ftd9IxmALLI="
@@ -49,19 +56,19 @@
       "digest": "948429d2d71cda1ec511884b9acb61832b86e631e18567e9f25ae4839a447a24",
       "integrity": "sha256-lIQp0tcc2h7FEYhLmsthgyuG5jHhhWfp8lrkg5pEeiQ="
     },
-    "application-107edce5cca5054203bc7aaba4031fb56af0cb8be3fd72aa3584c3d5a9374a87.js": {
+    "application-b8b0f538d98972a0c28b40134b38d93c11a3663d323829977ea1320d167ad8fc.js": {
       "logical_path": "application.js",
-      "mtime": "2015-07-23T14:34:34+02:00",
-      "size": 220213,
-      "digest": "107edce5cca5054203bc7aaba4031fb56af0cb8be3fd72aa3584c3d5a9374a87",
-      "integrity": "sha256-EH7c5cylBUIDvHqrpAMftWrwy4vj/XKqNYTD1ak3Soc="
+      "mtime": "2015-07-24T21:53:37+02:00",
+      "size": 225831,
+      "digest": "b8b0f538d98972a0c28b40134b38d93c11a3663d323829977ea1320d167ad8fc",
+      "integrity": "sha256-uLD1ONmJcqDCi0ATSzjZPBGjZj0yOCmXfqEyDRZ62Pw="
     },
-    "application-ae84f734295cbd6e657dc46697b8dc30a67cb919194041addaeefb206ed9efa9.css": {
+    "application-3754f8ced6896ba582a85d7edd2f77e0678d094f8d4c1b6b1c44210c2f38ce07.css": {
       "logical_path": "application.css",
-      "mtime": "2015-07-23T14:34:34+02:00",
-      "size": 266038,
-      "digest": "ae84f734295cbd6e657dc46697b8dc30a67cb919194041addaeefb206ed9efa9",
-      "integrity": "sha256-roT3NClcvW5lfcRml7jcMKZ8uRkZQEGt2u77IG7Z76k="
+      "mtime": "2015-07-24T21:53:37+02:00",
+      "size": 267576,
+      "digest": "3754f8ced6896ba582a85d7edd2f77e0678d094f8d4c1b6b1c44210c2f38ce07",
+      "integrity": "sha256-N1T4ztaJa6WCqF1+3S934GeNCU+NTBtrHEQhDC84zgc="
     },
     "rails_admin/aristo/images/bg_fallback-69fe09a001b1a5db2ea587c5ad86945184ca6d0768c6d8a78e744a5f2ba1d5fd.png": {
       "logical_path": "rails_admin/aristo/images/bg_fallback.png",
@@ -551,12 +558,13 @@
     "modenizr.js": "modenizr-14790a292c4f3eb8e6f405f1cc691fdbdf295ca7905518e2b86bb4b63dfd6be1.js",
     "imageloaded.pkgd.min.js": "imageloaded.pkgd.min-db5235a34f30a1dcb51d158f4cb7ac76431d468a829360a4854f3f8a26959183.js",
     "masonry.pkgd.min.js": "masonry.pkgd.min-51fccc86260d15d25e26f4a044a7612310ee699eb7ab43377b70c9a77240312a.js",
+    "bootstrap.file-input.js": "bootstrap.file-input-95ce09f3bbc59adf85247deef57c02619982858819cd79a56b4ff98c83211126.js",
     "rails_admin/rails_admin.js": "rails_admin/rails_admin-7723cc58acf2ec897be16e1f2fc59cbdd6b017f842e93c82ab3e81eb2bbfa811.js",
     "rails_admin/rails_admin.css": "rails_admin/rails_admin-20c0a8873377bd85e0ff483a13ef6b4a82d2871c7c28f0fa7ed77d2319802cb2.css",
     "rails_admin/jquery.colorpicker.js": "rails_admin/jquery.colorpicker-0275f6aebb5ddf53e57164c433a5563bb483cd9b621ed630558c1963fc5a4c6d.js",
     "rails_admin/jquery.colorpicker.css": "rails_admin/jquery.colorpicker-948429d2d71cda1ec511884b9acb61832b86e631e18567e9f25ae4839a447a24.css",
-    "application.js": "application-107edce5cca5054203bc7aaba4031fb56af0cb8be3fd72aa3584c3d5a9374a87.js",
-    "application.css": "application-ae84f734295cbd6e657dc46697b8dc30a67cb919194041addaeefb206ed9efa9.css",
+    "application.js": "application-b8b0f538d98972a0c28b40134b38d93c11a3663d323829977ea1320d167ad8fc.js",
+    "application.css": "application-3754f8ced6896ba582a85d7edd2f77e0678d094f8d4c1b6b1c44210c2f38ce07.css",
     "rails_admin/aristo/images/bg_fallback.png": "rails_admin/aristo/images/bg_fallback-69fe09a001b1a5db2ea587c5ad86945184ca6d0768c6d8a78e744a5f2ba1d5fd.png",
     "rails_admin/aristo/images/icon_sprite.png": "rails_admin/aristo/images/icon_sprite-34a30806fcba43a2effc9739cb7a370a865199a7d38bfcbc7c2474ef3ff70ded.png",
     "rails_admin/aristo/images/progress_bar.gif": "rails_admin/aristo/images/progress_bar-a2ed712d76dcffc7a06918cd389511bca2cf7bb91c12b1d865bf44c7b2c46289.gif",

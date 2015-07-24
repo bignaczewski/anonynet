@@ -14594,5 +14594,131 @@ fieldset input:focus + .field-help {
 .pagination {
     position: fixed;
     bottom: 0;
-    width: 100%
+    width: 100% !important
+}
+
+.pagination li {
+    width: 100% !important
+}
+
+.pagination li a {
+    width: 100% !important;
+    text-align: center
+}
+
+.glyphicon-flag, .glyphicon-trash, .show-comments, .actions {
+    position: relative;
+    float: right
+}
+
+.glyphicon-comment, .glyphicon-thumbs-up {
+    color: lightskyblue
+}
+
+.glyphicon-heart, .glyphicon-heart-empty {
+    color: lightcoral
+}
+
+.likes, .comments, .show-comments, .actions, .form-control, textarea {
+    display: inline
+}
+
+.actions {
+    right: 15px;
+    top: 7px
+}
+
+.new_comment .actions {
+    right: -1px;
+    top: -30px
+}
+
+#comment-form .btn-primary, #comment-form .submit, #comment-form .authform .button, .authform #comment-form .button, #comment-form .button-xs {
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+    width: 95px;
+    margin-top: -20px
+}
+
+#attachment_field {
+    margin-left: 15px;
+    margin-top: 10px
+}
+
+textarea {
+    resize: none;
+    border-radius: 5px
+}
+
+hr {
+    height: 1px;
+    width: 100% !important
+}
+
+html, body {
+    height: 100%
+}
+
+#main-container {
+    min-height: 100%;
+    margin-bottom: -60px;
+    position: relative
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f6f6f6;
+    opacity: 0.8;
+    clear: both
+}
+
+.footer > .container, .footer > main {
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.footer.container div, main.footer div, a {
+    diplay: inline-block !important
+}
+
+#submit-post {
+    top: -90px;
+    right: 15px
+}
+
+.label-info {
+    font-size: 14px;
+    padding: 9px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    white-space: normal
+}
+
+.alert.growlyflash {
+    position: absolute;
+    margin: 0;
+    top: 60px;
+    width: auto;
+    z-index: 9999
+}
+
+.alert.growlyflash.growlyflash-left {
+    left: 20px
+}
+
+.alert.growlyflash.growlyflash-right {
+    right: 20px
+}
+
+.alert.growlyflash.growlyflash-center {
+    left: 50%
+}
+
+body > .alert.growlyflash {
+    position: fixed
 }
