@@ -1,20 +1,20 @@
 %hr
 .comment{id: "#{comment.class}-#{comment.id}"}
-  .date
+  - if comment and (check_if_comment_cannot_be_seen(comment) == false)
+    .date
     %i.glyphicon.glyphicon-time
     = comment.created_at.strftime('%d-%m-%Y')
-    - if comment and (check_if_comment_cannot_be_seen(comment) == false)
-      - if current_user and !(comment.user_id and comment.user_id == current_user.id)
-        = link_to report_comment_path(id: comment.id), method: :post, remote: true, data: { confirm: I18n.t('are_you_sure_to_report_comment') } do
-          %i.glyphicon.glyphicon-flag
-      %div
-        %br
-        = comment.content_html
-      %div{class: "#{comment.class}-#{comment.id}"}
-        = render 'shared/like_form', likeable: comment
-        .likes
-          %i.glyphicon.glyphicon-heart
-          = comment.likers(User).count
-    - else
-      %div
-        = I18n.t('posts.keep_reading')
+    - if current_user and !(comment.user_id and comment.user_id == current_user.id)
+      = link_to report_comment_path(id: comment.id), method: :post, remote: true, data: { confirm: I18n.t('are_you_sure_to_report_comment') } do
+        %i.glyphicon.glyphicon-flag
+    %div
+      %br
+      = comment.content_html
+    %div{class: "#{comment.class}-#{comment.id}"}
+      = render 'shared/like_form', likeable: comment
+      .likes
+        %i.glyphicon.glyphicon-heart
+        = comment.likers(User).count
+  - else
+    %div
+      = I18n.t('posts.keep_reading')

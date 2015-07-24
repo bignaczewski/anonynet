@@ -8,6 +8,8 @@ class Comment < ActiveRecord::Base
 
   acts_as_likeable
 
+  validates :content, presence: true, allow_blank: false
+
   auto_html_for :content do
     html_escape
     image
