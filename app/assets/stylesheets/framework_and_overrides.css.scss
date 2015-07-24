@@ -299,7 +299,7 @@ fieldset input:focus + .field-help {
   color: lightcoral;
 }
 
-.likes, .comments, .show-comments, .actions, .field, .form-control, .form-group, textarea {
+.likes, .comments, .show-comments, .actions, .form-control, .form-group, textarea {
   display: inline;
 }
 
@@ -320,12 +320,9 @@ fieldset input:focus + .field-help {
   width: 95px;
 }
 
-#attachment_field input {
-  display: inline;
-}
-
-#attachment_field input[type=file] {
-
+#attachment_field {
+  margin-left: 15px;
+  margin-top: 10px;
 }
 
 textarea {
@@ -355,4 +352,9 @@ hr {
 
 .footer.container div, a {
   diplay: inline-block !important;
+}
+
+#submit-post {
+  top: -90px;
+  right: 15px;
 }

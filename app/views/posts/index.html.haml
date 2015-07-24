@@ -12,10 +12,8 @@
   %p nie jesteś zalogowany. możesz postować, ale brak socjalizacji i ludzie mogą to filtrować
   = render 'form'
 
-%br
-
 #masonry.endless-page
   = render @posts
   %ul.pagination.pager
     %li
-      = link_to_next_page @posts, 'More posts', remote: true, params: { category: params[:category] }
+      = link_to_next_page @posts, t('posts.more_posts'), remote: true, params: { category: params[:category] }

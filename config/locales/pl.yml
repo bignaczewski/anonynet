@@ -75,6 +75,8 @@ pl:
     file_uploaded: "Udostępnij. Plik przesłano"
     keep_reading: "Czytaj dalej... nic tu nie ma :) - admin"
     no_more_posts: "To już wszystkie posty z tej kategorii"
+    upload_file: "Wrzuć zdjęcie"
+    more_posts: "Więcej postów"
   date:
     abbr_day_names:
       - nie

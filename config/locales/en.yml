@@ -62,7 +62,7 @@ en:
   next_label: "Next label"
   approve_users: "Approve users"
   posts:
-    share: "Share"
+    share: "Share it"
     content: "What would you like to share?"
     like: "like"
     unlike: "unlike"
@@ -75,6 +75,8 @@ en:
     file_uploaded: "Submit. File uploaded"
     keep_reading: "Keep reading... nothing's here :) - admin"
     no_more_posts: "No more posts to load in this category"
+    upload_file: "Upload picture"
+    more_posts: "More posts"
   date:
     abbr_day_names:
       - Sun

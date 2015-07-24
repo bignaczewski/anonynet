@@ -40,4 +40,7 @@ $(document).ready(function () { // wrong choice considering turbolinks. but work
         msnry = new Masonry(container);
     });
 
+    $('input[type=file]').bootstrapFileInput();
+    $('.file-inputs').bootstrapFileInput();
+
 });
