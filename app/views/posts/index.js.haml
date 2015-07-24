@@ -16,4 +16,4 @@ msnry = new Masonry(container);
   $('#masonry').append("<p class=\"pagination\">#{I18n.t('posts.no_more_posts')}</p>");
 - else
   $('.pagination').remove();
-  $('#masonry').append("<p class=\"pagination\">#{j link_to_next_page(@posts, 'More posts', remote: true, params: { category: params[:category] })}</p>");
+  $('#masonry').append("<ul class=\"pagination pager\"><li>#{j link_to_next_page(@posts, 'More posts', remote: true, params: { category: params[:category] })}</li></p>");

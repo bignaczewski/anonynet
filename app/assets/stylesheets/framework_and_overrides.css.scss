@@ -285,3 +285,74 @@ fieldset input:focus + .field-help {
   width: 100%;
   //display: none !important;
 }
+
+.glyphicon-flag, .glyphicon-trash, .show-comments, .actions {
+  position: relative;
+  float: right;
+}
+
+.glyphicon-comment, .glyphicon-thumbs-up {
+  color: lightskyblue;
+}
+
+.glyphicon-heart, .glyphicon-heart-empty {
+  color: lightcoral;
+}
+
+.likes, .comments, .show-comments, .actions, .field, .form-control, .form-group, textarea {
+  display: inline;
+}
+
+.actions {
+  right: 15px;
+  top: 7px;
+}
+
+.new_comment .actions {
+  right: -1px;
+  top: -30px;
+}
+
+#comment-form .btn-primary {
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 5px;
+  width: 95px;
+}
+
+#attachment_field input {
+  display: inline;
+}
+
+#attachment_field input[type=file] {
+
+}
+
+textarea {
+  resize: none;
+  border-radius: 5px;
+}
+
+hr {
+  height: 1px;
+  width: 100% !important;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: rgb(246, 246, 246);
+  /*opacity: 0.5;*/
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.footer.container div, a {
+  diplay: inline-block !important;
+}

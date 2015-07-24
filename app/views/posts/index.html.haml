@@ -1,5 +1,7 @@
 = render 'posts/categories'
 
+%br
+
 - if current_user and !current_user.banned and !current_user.admin
   = render 'form'
 - elsif current_user and current_user.banned
@@ -10,7 +12,10 @@
   %p nie jesteś zalogowany. możesz postować, ale brak socjalizacji i ludzie mogą to filtrować
   = render 'form'
 
+%br
+
 #masonry.endless-page
   = render @posts
-  %p.pagination
-    = link_to_next_page @posts, 'More posts', remote: true, params: { category: params[:category] }
+  %ul.pagination.pager
+    %li
+      = link_to_next_page @posts, 'More posts', remote: true, params: { category: params[:category] }

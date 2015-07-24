@@ -1,1 +1,3 @@
-= link_to (t('posts.like').capitalize), like_path(likeable_id: likeable.id, likeable_type: likeable.class), remote: true, method: :get, class: 'like'
+= link_to like_path(likeable_id: likeable.id, likeable_type: likeable.class), method: :get, remote: true, class: 'like' do
+  %i.glyphicon.glyphicon-heart-empty
+  = I18n.t('posts.like').capitalize

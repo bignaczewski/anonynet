@@ -316,6 +316,7 @@ pl:
         post_name: 'Post'
         image_content_content_type: 'Typ pliku'
         image_content: 'Zawartość pliku'
+      comment: "Komentarz"
     errors:
       models:
         post:
@@ -364,5 +365,6 @@ pl:
     thoughts: "Przemyślenia"
     dreams_and_hopes: "Marzenia i nadzieje"
     everyday_life: "Życie codzienne"
-    regrets: "Ubolewania"
+    regrets: "Problemy"
     other: "Inne"
+  linkedin: "Obejrzyj mój profil na LinkedIn"

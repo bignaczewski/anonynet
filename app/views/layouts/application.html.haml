@@ -17,3 +17,13 @@
           %main{role: 'main'}
             = render 'layouts/messages'
             = yield
+    %footer.footer
+      .container.inline-block
+        %br
+        %div.text-muted
+          @ 2015 Bartosz Ignaczewski
+          = link_to I18n.t('linkedin'), 'https://www.linkedin.com/in/bartoszignaczewski'
+
+          -#%a{:href => "https://nl.linkedin.com/pub/bartosz-ignaczewski/ab/95b/311", :style => "text-decoration:none;"}
+          -#  %span{:style => "font: 80% Arial,sans-serif; color:#0783B6;"}
+          -#    %img{:alt => "View Bartosz Ignaczewski's LinkedIn profile", :border => "0", :height => "15", :src => "https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png", :style => "vertical-align:middle;", :width => "20"} &nbsp;View Bartosz Ignaczewski's profile

@@ -1,4 +1,6 @@
 .comments{:id => "comments-#{@post.id}"}
-  = link_to (t('posts.hide_comments')), hide_comments_path(id: @post.id), remote: true, data: {id: @post.id}
+  %br
+  .show-comments
+    = link_to (t('posts.hide_comments')), hide_comments_path(id: @post.id), remote: true, data: {id: @post.id}
   = render 'shared/form'
   = render @comments

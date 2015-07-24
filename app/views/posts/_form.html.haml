@@ -6,10 +6,10 @@
         - @post.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label t('posts.content')
-    = f.text_area :content, :id => 'submit-new-post'
+  = hidden_field_tag(:category, params[:category])
+  .form-control
+    = f.text_area :content, :id => 'submit-new-post', :size => '120x2', placeholder: t('posts.content')
   .field#attachment_field
-    = f.attachment_field :image_content, direct: true
+    = f.attachment_field :image_content, direct: true, class: 'btn btn-primary'
   .actions
-    = f.submit t('posts.share')
+    = f.submit t('posts.share'), class: 'btn btn-primary'

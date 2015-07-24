@@ -1,18 +1,25 @@
 .post{id: post.id}
-  = post.category
-  - if (current_user and post.user_id == current_user.id) or current_user.try(:admin?)
-    = link_to 'destroy', post, method: :delete, remote: :true, data: { confirm: I18n.t('are_you_sure_to_destroy') }
-  - elsif current_user and post.user_id != current_user.id
-    = link_to 'report', report_post_path(id: post.id), method: :post, remote: :true, data: { confirm: I18n.t('are_you_sure_to_report_post') }
+  .date
+    %i.glyphicon.glyphicon-time
+    = post.created_at.strftime('%d-%m-%Y')
+    - if (current_user and post.user_id == current_user.id) or current_user.try(:admin?)
+      = link_to post, method: :delete, remote: true, data: { confirm: I18n.t('are_you_sure_to_destroy') } do
+        %i.glyphicon.glyphicon-trash
+    - elsif current_user and post.user_id != current_user.id
+      = link_to report_post_path(id: post.id), method: :post, remote: true, data: { confirm: I18n.t('are_you_sure_to_report_post') } do
+        %i.glyphicon.glyphicon-flag
   .content
     =post.content_html
   - if post.image_content_id
     =image_tag attachment_url(post, :image_content, :fill, 300, 300)
+    %br
   %div{class: "#{post.class}-#{post.id}"}
     =render 'shared/like_form', likeable: post
-    .comments{id: "link_to-#{post.id}"}
-      =pluralize(post.comments.count, I18n.t('posts.comment'))
     .likes
-      =pluralize(post.likers(User).count, I18n.t('posts.like'))
-  %div{id: "link-show-#{post.id}"}
-    =link_to (t('posts.show_comments')), show_comments_path(id: post.id), remote: true, data: {id: post.id}
+      %i.glyphicon.glyphicon-heart
+      = post.likers(User).count
+    .comments{id: "link_to-#{post.id}"}
+      %i.glyphicon.glyphicon-comment
+      = post.comments.count
+    %div.show-comments{id: "link-show-#{post.id}"}
+      =link_to (t('posts.show_comments')), show_comments_path(id: post.id), remote: true, data: {id: post.id}
