@@ -331,8 +331,12 @@ fieldset input:focus + .field-help {
 }
 
 #attachment_field {
-  margin-left: 15px;
-  margin-top: 10px;
+  //margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  border: 1px;
+  border-color: black;
 }
 
 textarea {
@@ -377,7 +381,7 @@ html, body {
 }
 
 #submit-post {
-  top: -90px;
+  top: -105px;
   right: 15px;
 }
 

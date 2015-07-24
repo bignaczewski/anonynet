@@ -24,6 +24,7 @@
 //= require twitter/bootstrap/rails/confirm
 //= require jquery.infinite-pages
 //= require growlyflash
+//= require bootstrap.filestyle
 //= require turbolinks
 //= require_tree .
 
@@ -40,8 +41,5 @@ $(document).ready(function () { // wrong choice considering turbolinks. but work
     imagesLoaded(container, function () {
         msnry = new Masonry(container);
     });
-
-    $('input[type=file]').bootstrapFileInput();
-    $('.file-inputs').bootstrapFileInput();
 
 });
