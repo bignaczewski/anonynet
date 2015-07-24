@@ -57,11 +57,12 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params, content_html: Obscenity.sanitize(post_params[:content]))
     @post.user_id = current_user.id if current_user
-    if params[:category] and params[:category] != '0'
+    if params[:category] and params[:category] != '' and params[:category] != '0'
       @post.category = params[:category].to_i
     else
       @post.category = 5
     end
+    binding.pry
     @post.save
     respond_to do |format|
       format.html { redirect_to posts_path }

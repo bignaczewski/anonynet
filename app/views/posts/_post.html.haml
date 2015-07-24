@@ -8,6 +8,9 @@
     - elsif current_user and post.user_id != current_user.id
       = link_to report_post_path(id: post.id), method: :post, remote: true, data: { confirm: I18n.t('are_you_sure_to_report_post') } do
         %i.glyphicon.glyphicon-flag
+    - if params[:category].nil? or params[:category] == '0' or params[:category] == ''
+      %i.glyphicon.glyphicon-tag
+      = translate_enum post, :category
   .content
     =post.content_html
   - if post.image_content_id

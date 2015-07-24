@@ -370,3 +370,10 @@ pl:
     regrets: "Problemy"
     other: "Inne"
   linkedin: "Obejrzyj mój profil na LinkedIn"
+  enums:
+    category:
+      everyday_life: "Życie codzienne"
+      dreams_and_hopes: "Marzenia i nadzieje"
+      regrets: "Problemy"
+      thoughts: "Przemyślenia"
+      other: "Inne"

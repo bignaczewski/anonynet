@@ -282,8 +282,17 @@ fieldset input:focus + .field-help {
 .pagination {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 100% !important;
   //display: none !important;
+}
+
+.pagination li {
+  width: 100% !important;
+}
+
+.pagination li a {
+  width: 100% !important;
+  text-align: center;
 }
 
 .glyphicon-flag, .glyphicon-trash, .show-comments, .actions {
@@ -357,4 +366,9 @@ hr {
 #submit-post {
   top: -90px;
   right: 15px;
+}
+
+.label-info {
+  font-size: 14px;
+  padding: 9px;
 }

@@ -13,7 +13,7 @@ msnry = new Masonry(container);
 
 - if @posts.last_page?
   $('.pagination').remove();
-  $('#masonry').append("<p class=\"pagination\">#{I18n.t('posts.no_more_posts')}</p>");
+  $('#masonry').append("<ul class=\"pagination label label-info\"><li>#{I18n.t('posts.no_more_posts')}</li></ul>");
 - else
   $('.pagination').remove();
-  $('#masonry').append("<ul class=\"pagination pager\"><li>#{j link_to_next_page(@posts, 'More posts', remote: true, params: { category: params[:category] })}</li></p>");
+  $('#masonry').append("<ul class=\"pagination\"><li>#{j link_to_next_page(@posts, t('posts.more_posts'), remote: true, params: { category: params[:category] })}</li></ul>");

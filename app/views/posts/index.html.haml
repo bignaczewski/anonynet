@@ -14,6 +14,6 @@
 
 #masonry.endless-page
   = render @posts
-  %ul.pagination.pager
+  %ul.pagination
     %li
       = link_to_next_page @posts, t('posts.more_posts'), remote: true, params: { category: params[:category] }
