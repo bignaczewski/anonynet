@@ -77,6 +77,7 @@ pl:
     no_more_posts: "To już wszystkie posty z tej kategorii"
     upload_file: "Wrzuć zdjęcie"
     more_posts: "Więcej postów"
+    cannot_be_blank: "Treść postu nie może być pusta"
   date:
     abbr_day_names:
       - nie
@@ -319,12 +320,16 @@ pl:
         image_content_content_type: 'Typ pliku'
         image_content: 'Zawartość pliku'
       comment: "Komentarz"
+      user:
+        password: "Hasło"
     errors:
       models:
         post:
           attributes:
             size: 'Plik ma za duży rozmiar'
             content_type: 'Złe rozszerzenie pliku'
+        user:
+          password: "Hasło"
   will_paginate:
     next_label: Następna &#8594;
     page_entries_info:
@@ -377,3 +382,7 @@ pl:
       regrets: "Problemy"
       thoughts: "Przemyślenia"
       other: "Inne"
+  ban_info: "Zostałeś zbanowany. Skontaktuj się z administratorem serwisu. Nie możesz udostępniać nowych treści ani lubić treści innych. Twoje posty i komentarze nie są widoczne."
+  admin_welcome: "Witam Panie Adminie. Przejdź do swojego"
+  admin_panel_ign: "panelu administratora."
+  not_logged_in: "Nie jesteś zalogowany. Możesz postować, komentować tylko posty udostępnione przez niezalogowanych użytkowników (takich jak Ty). Nie możesz lubić rzeczy udostępnionych przez innych i zalogowani użytkownicy mogą filtrować udostępniane przez Ciebie treści."

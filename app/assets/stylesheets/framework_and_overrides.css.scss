@@ -308,7 +308,7 @@ fieldset input:focus + .field-help {
   color: lightcoral;
 }
 
-.likes, .comments, .show-comments, .actions, .form-control, .form-group, textarea {
+.likes, .comments, .show-comments, .actions, .form-control, textarea {
   display: inline;
 }
 
@@ -327,6 +327,7 @@ fieldset input:focus + .field-help {
   font-size: 12px;
   border-radius: 5px;
   width: 95px;
+  margin-top: -20px;
 }
 
 #attachment_field {
@@ -344,6 +345,17 @@ hr {
   width: 100% !important;
 }
 
+html, body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+#main-container {
+  min-height: 100%;
+  margin-bottom: -60px;
+  position: relative;
+}
+
 .footer {
   position: relative;
   bottom: 0;
@@ -351,7 +363,8 @@ hr {
   /* Set the fixed height of the footer here */
   height: 60px;
   background-color: rgb(246, 246, 246);
-  /*opacity: 0.5;*/
+  opacity: 0.8;
+  clear: both;
 }
 
 .footer > .container {
@@ -371,4 +384,8 @@ hr {
 .label-info {
   font-size: 14px;
   padding: 9px;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  white-space: normal;
 }

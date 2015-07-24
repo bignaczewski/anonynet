@@ -62,7 +62,6 @@ class PostsController < ApplicationController
     else
       @post.category = 5
     end
-    binding.pry
     @post.save
     respond_to do |format|
       format.html { redirect_to posts_path }

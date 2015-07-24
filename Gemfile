@@ -84,7 +84,11 @@ gem 'obscenity'
 
 gem 'rails_admin'
 
+# enum for rails
 gem 'simple_enum'
+
+# better flash messages
+gem 'growlyflash'
 
 group :production do
   # For Heroku needs

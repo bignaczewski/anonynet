@@ -23,6 +23,7 @@
 //= require bootstrap-sprockets
 //= require twitter/bootstrap/rails/confirm
 //= require jquery.infinite-pages
+//= require growlyflash
 //= require turbolinks
 //= require_tree .
 

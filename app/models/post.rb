@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
 
   acts_as_likeable
 
-  validates :content, presence: true, allow_blank: false
+  validates :content, presence: {message: I18n.t('posts.cannot_be_blank')}, allow_blank: false
 
   attachment :image_content, type: :image
 

@@ -77,6 +77,7 @@ en:
     no_more_posts: "No more posts to load in this category"
     upload_file: "Upload picture"
     more_posts: "More posts"
+    cannot_be_blank: "Post content can not be blank"
   date:
     abbr_day_names:
       - Sun
@@ -340,3 +341,7 @@ en:
       everyday_life: "Everyday life"
       regrets: "Regrets and problems"
       other: "Other"
+  ban_info: "You are banned. Contact the administrator for further information. You can not socialize with other users and your posts and comments are not visible."
+  admin_welcome: "Admin... welcome. Go to your "
+  admin_panel_ign: "admin panel."
+  not_logged_in: "You are not logged in. You can post freely, comment only posts that were created by only not logged poeple (like you). You can not like stuff others shared and logged users can filter your shares."

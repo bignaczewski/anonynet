@@ -99,6 +99,9 @@ GEM
       railties (>= 3.2, < 5.0)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    growlyflash (0.8.1)
+      coffee-rails (>= 3.2.1)
+      railties (>= 3.2, < 5.0)
     haml (4.0.6)
       tilt
     haml-rails (0.9.0)
@@ -335,6 +338,7 @@ DEPENDENCIES
   devise
   devise-i18n
   erb2haml
+  growlyflash
   haml-rails
   heroku_secrets!
   i18n-coffee

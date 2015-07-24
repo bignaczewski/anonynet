@@ -7,6 +7,10 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
+  use_growlyflash # except: %i[actions without growlyflash]
+  # Also there is another shorthand, to skip callbacks:
+  # skip_growlyflash only: %i[actions without growlyflash]
+
   def set_locale
     if cookies[:educator_locale] && I18n.available_locales.include?(cookies[:educator_locale].to_sym)
       l = cookies[:educator_locale].to_sym

@@ -6,6 +6,7 @@
     %title= content_for?(:title) ? yield(:title) : 'Anonynet'
     %meta{content: "#{content_for?(:description) ? yield(:description) : 'Anonynet'}", name: 'description'}/
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = growlyflash_static_notices
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
@@ -15,7 +16,7 @@
       .row
         #content.col-md-14
           %main{role: 'main'}
-            = render 'layouts/messages'
+            -#= render 'layouts/messages' # growlyflash handles this
             = yield
     %footer.footer
       .container.inline-block

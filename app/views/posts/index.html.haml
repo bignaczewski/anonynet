@@ -5,11 +5,15 @@
 - if current_user and !current_user.banned and !current_user.admin
   = render 'form'
 - elsif current_user and current_user.banned
-  %p Zostałeś zbanowany. Skontaktuj się z adminem. nie mozesz sie socjalizować, twoje posty i komentarze nie sa widoczne
+  %p.label.label-info
+    = I18n.t('ban_info')
 - elsif current_user.try(:admin?)
-  %p Witam Panie Adminie. Przejdź do swojego #{link_to 'panelu administratora', rails_admin_path}
+  %p.label.label-info
+    = I18n.t('admin_welcome')
+    = link_to I18n.t('admin_panel_ign'), rails_admin_path
 - else
-  %p nie jesteś zalogowany. możesz postować, ale brak socjalizacji i ludzie mogą to filtrować
+  %p.label.label-info
+    = t('not_logged_in')
   = render 'form'
 
 #masonry.endless-page
