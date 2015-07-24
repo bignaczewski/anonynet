@@ -1,4 +1,5 @@
 .post{id: post.id}
+  = post.category
   - if (current_user and post.user_id == current_user.id) or current_user.try(:admin?)
     = link_to 'destroy', post, method: :delete, remote: :true, data: { confirm: I18n.t('are_you_sure_to_destroy') }
   - elsif current_user and post.user_id != current_user.id

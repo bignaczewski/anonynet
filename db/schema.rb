@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20150722113402) do
     t.string   "image_content_filename"
     t.integer  "image_content_size"
     t.string   "image_content_content_type"
-    t.integer  "category"
+    t.integer  "category_cd",                default: 0
     t.boolean  "hidden",                     default: false
   end
 

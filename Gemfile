@@ -84,6 +84,8 @@ gem 'obscenity'
 
 gem 'rails_admin'
 
+gem 'simple_enum'
+
 group :production do
   # For Heroku needs
   gem 'thin'

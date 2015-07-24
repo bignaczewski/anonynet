@@ -74,7 +74,7 @@ pl:
     uploading_file: "Przesyłanie pliku..."
     file_uploaded: "Udostępnij. Plik przesłano"
     keep_reading: "Czytaj dalej... nic tu nie ma :) - admin"
-    no_more_posts: "Nie ma więcej postów do załadowania"
+    no_more_posts: "To już wszystkie posty z tej kategorii"
   date:
     abbr_day_names:
       - nie
@@ -358,4 +358,11 @@ pl:
       new: "Nowy"
       delete: "Usuń"
   report: "Zgłoś post do administratora i usuń ze swojego widoku"
-
+  categories:
+    category: "Kategoria"
+    all: "Wszystkie posty"
+    thoughts: "Przemyślenia"
+    dreams_and_hopes: "Marzenia i nadzieje"
+    everyday_life: "Życie codzienne"
+    regrets: "Ubolewania"
+    other: "Inne"

@@ -12,7 +12,8 @@ msnry = new Masonry(container);
 });
 
 - if @posts.last_page?
-  $('.pagination').html('#{I18n.t('posts.no_more_posts')}');
+  $('.pagination').remove();
+  $('#masonry').append("<p class=\"pagination\">#{I18n.t('posts.no_more_posts')}</p>");
 - else
   $('.pagination').remove();
-  $('#masonry').append("<p class=\"pagination\">#{j link_to_next_page(@posts, 'More posts', :remote => true)}</p>");
+  $('#masonry').append("<p class=\"pagination\">#{j link_to_next_page(@posts, 'More posts', remote: true, params: { category: params[:category] })}</p>");

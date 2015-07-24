@@ -1,3 +1,5 @@
+= render 'posts/categories'
+
 - if current_user and !current_user.banned and !current_user.admin
   = render 'form'
 - elsif current_user and current_user.banned
@@ -11,4 +13,4 @@
 #masonry.endless-page
   = render @posts
   %p.pagination
-    = link_to_next_page @posts, 'More posts', remote: true
+    = link_to_next_page @posts, 'More posts', remote: true, params: { category: params[:category] }

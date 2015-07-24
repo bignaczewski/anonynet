@@ -1,0 +1,79 @@
+%ul.nav.nav-tabs.nav-justified
+  - if params[:category] == '0' or params[:category].nil?
+    %li.active.disabled
+      = link_to (t('categories.all')), posts_path(params, category: 0)
+    %li
+      = link_to (t('categories.everyday_life')), posts_path(params, category: 1)
+    %li
+      = link_to (t('categories.dreams_and_hopes')), posts_path(params, category: 2)
+    %li
+      = link_to (t('categories.regrets')), posts_path(params, category: 3)
+    %li
+      = link_to (t('categories.thoughts')), posts_path(params, category: 4)
+    %li
+      = link_to (t('categories.other')), posts_path(params, category: 5)
+  - elsif params[:category] == '1'
+    %li
+      = link_to (t('categories.all')), posts_path(params, category: 0)
+    %li.active
+      = link_to (t('categories.everyday_life')), posts_path(params, category: 1)
+    %li
+      = link_to (t('categories.dreams_and_hopes')), posts_path(params, category: 2)
+    %li
+      = link_to (t('categories.regrets')), posts_path(params, category: 3)
+    %li
+      = link_to (t('categories.thoughts')), posts_path(params, category: 4)
+    %li
+      = link_to (t('categories.other')), posts_path(params, category: 5)
+  - elsif params[:category] == '2'
+    %li
+      = link_to (t('categories.all')), posts_path(params, category: 0)
+    %li
+      = link_to (t('categories.everyday_life')), posts_path(params, category: 1)
+    %li.active
+      = link_to (t('categories.dreams_and_hopes')), posts_path(params, category: 2)
+    %li
+      = link_to (t('categories.regrets')), posts_path(params, category: 3)
+    %li
+      = link_to (t('categories.thoughts')), posts_path(params, category: 4)
+    %li
+      = link_to (t('categories.other')), posts_path(params, category: 5)
+  - elsif params[:category] == '3'
+    %li
+      = link_to (t('categories.all')), posts_path(params, category: 0)
+    %li
+      = link_to (t('categories.everyday_life')), posts_path(params, category: 1)
+    %li
+      = link_to (t('categories.dreams_and_hopes')), posts_path(params, category: 2)
+    %li.active
+      = link_to (t('categories.regrets')), posts_path(params, category: 3)
+    %li
+      = link_to (t('categories.thoughts')), posts_path(params, category: 4)
+    %li
+      = link_to (t('categories.other')), posts_path(params, category: 5)
+  - elsif params[:category] == '4'
+    %li
+      = link_to (t('categories.all')), posts_path(params, category: 0)
+    %li
+      = link_to (t('categories.everyday_life')), posts_path(params, category: 1)
+    %li
+      = link_to (t('categories.dreams_and_hopes')), posts_path(params, category: 2)
+    %li
+      = link_to (t('categories.regrets')), posts_path(params, category: 3)
+    %li.active
+      = link_to (t('categories.thoughts')), posts_path(params, category: 4)
+    %li
+      = link_to (t('categories.other')), posts_path(params, category: 5)
+  - elsif params[:category] == '5'
+    %li
+      = link_to (t('categories.all')), posts_path(params, category: 0)
+    %li
+      = link_to (t('categories.everyday_life')), posts_path(params, category: 1)
+    %li
+      = link_to (t('categories.dreams_and_hopes')), posts_path(params, category: 2)
+    %li
+      = link_to (t('categories.regrets')), posts_path(params, category: 3)
+    %li
+      = link_to (t('categories.thoughts')), posts_path(params, category: 4)
+    %li.active
+      = link_to (t('categories.other')), posts_path(params, category: 5)
