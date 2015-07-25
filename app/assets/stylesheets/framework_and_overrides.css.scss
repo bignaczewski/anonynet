@@ -295,9 +295,13 @@ fieldset input:focus + .field-help {
   text-align: center;
 }
 
-.glyphicon-flag, .glyphicon-trash, .show-comments, .actions {
+.glyphicon-flag, .glyphicon-trash, .show-comments, .actions, .glyphicon-user {
   position: relative;
   float: right;
+}
+
+.glyphicon-user {
+  right: 3px;
 }
 
 .glyphicon-comment, .glyphicon-thumbs-up {

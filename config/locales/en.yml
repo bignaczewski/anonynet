@@ -78,6 +78,9 @@ en:
     upload_file: "Upload picture"
     more_posts: "More posts"
     cannot_be_blank: "Post content can not be blank"
+    created_logged: "Content created by logged user"
+    trash: "This action will cause permanent post deletion"
+    flag: "This action will cause reporting current share to the administrator and hiding it in your view"
   date:
     abbr_day_names:
       - Sun
@@ -328,11 +331,6 @@ en:
   categories:
     category: "Category"
     all: "All posts"
-    thoughts: "Thoughts"
-    dreams_and_hopes: "Dreams and hopes"
-    everyday_life: "Everyday life"
-    regrets: "Regrets and problems"
-    other: "Other"
   linkedin: "Visit my LinkedIn profile"
   enums:
     category:
@@ -345,3 +343,4 @@ en:
   admin_welcome: "Admin... welcome. Go to your "
   admin_panel_ign: "admin panel."
   not_logged_in: "You are not logged in. You can post freely, comment only posts that were created by only not logged poeple (like you). You can not like stuff others shared and logged users can filter your shares."
+  current_category: "current category"

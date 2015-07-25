@@ -4,13 +4,15 @@
     = post.created_at.strftime('%d-%m-%Y')
     - if (current_user and post.user_id == current_user.id) or current_user.try(:admin?)
       = link_to post, method: :delete, remote: true, data: { confirm: I18n.t('are_you_sure_to_destroy') } do
-        %i.glyphicon.glyphicon-trash
+        %i.glyphicon.glyphicon-trash{title: I18n.t('posts.trash')}
     - elsif current_user and post.user_id != current_user.id
       = link_to report_post_path(id: post.id), method: :post, remote: true, data: { confirm: I18n.t('are_you_sure_to_report_post') } do
-        %i.glyphicon.glyphicon-flag
+        %i.glyphicon.glyphicon-flag{title: I18n.t('posts.flag')}
     - if params[:category].nil? or params[:category] == '0' or params[:category] == ''
       %i.glyphicon.glyphicon-tag
       = translate_enum post, :category
+    - if post.user_id
+      %i.glyphicon.glyphicon-user{title: I18n.t('posts.created_logged')}
   .content
     =post.content_html
   - if post.image_content_id

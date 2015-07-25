@@ -78,6 +78,9 @@ pl:
     upload_file: "Wrzuć zdjęcie"
     more_posts: "Więcej postów"
     cannot_be_blank: "Treść postu nie może być pusta"
+    created_logged: "Treść udostępniona przez zalogowanego użytkownika"
+    trash: "Ta akcja spowoduje permanentne usunięcie postu"
+    flag: "Ta akcja spowoduje zgłoszenie bieżącej treści do administratora oraz usunięcie jej z Twojego widoku"
   date:
     abbr_day_names:
       - nie
@@ -369,11 +372,6 @@ pl:
   categories:
     category: "Kategoria"
     all: "Wszystkie posty"
-    thoughts: "Przemyślenia"
-    dreams_and_hopes: "Marzenia i nadzieje"
-    everyday_life: "Życie codzienne"
-    regrets: "Problemy"
-    other: "Inne"
   linkedin: "Obejrzyj mój profil na LinkedIn"
   enums:
     category:
@@ -386,3 +384,4 @@ pl:
   admin_welcome: "Witam Panie Adminie. Przejdź do swojego"
   admin_panel_ign: "panelu administratora."
   not_logged_in: "Nie jesteś zalogowany. Możesz postować, komentować tylko posty udostępnione przez niezalogowanych użytkowników (takich jak Ty). Nie możesz lubić rzeczy udostępnionych przez innych i zalogowani użytkownicy mogą filtrować udostępniane przez Ciebie treści."
+  current_category: "bieżąca kategoria"
