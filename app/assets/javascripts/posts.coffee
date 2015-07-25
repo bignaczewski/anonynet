@@ -12,16 +12,6 @@ $(document).on 'upload:start', 'form', (e) ->
   $(this).find('input[type=submit]').attr 'disabled', true
   NProgress.start()
   return
-$(document).on 'upload:progress', 'form', (e) ->
-# Process upload details to get the percentage complete
-  uploadDetail = e.originalEvent.detail
-  percentLoaded = uploadDetail.loaded
-  totalSize = uploadDetail.total
-  percentageComplete = Math.round(percentLoaded / totalSize * 100)
-  # Reflect the percentage on the progress bar
-  #  console.log(percentageComplete)
-  NProgress.set(percentageComplete)
-  return
 $(document).on 'upload:complete', 'form', (e) ->
   if !$(this).find('input.uploading').length
     $(this).find('input[type=submit]').removeAttr 'disabled'
