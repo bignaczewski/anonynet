@@ -81,6 +81,8 @@ en:
     created_logged: "Content created by logged user"
     trash: "This action will cause permanent post deletion"
     flag: "This action will cause reporting current share to the administrator and hiding it in your view"
+    show_none: "Uncheck if you do not want to see shares from not logged users"
+    show_all: "Check if you want to see shares from not logged users"
   date:
     abbr_day_names:
       - Sun
@@ -290,6 +292,8 @@ en:
         post_name: 'Post'
         image_content_content_type: 'File type'
         image_content: 'File content'
+      user:
+        username: "User"
     errors:
       models:
         post:
@@ -344,3 +348,6 @@ en:
   admin_panel_ign: "admin panel."
   not_logged_in: "You are not logged in. You can post freely, comment only posts that were created by only not logged poeple (like you). You can not like stuff others shared and logged users can filter your shares."
   current_category: "current category"
+  settings: "Account settings"
+  change_account_settings: "Change account settings"
+  change_settings: "Submit"

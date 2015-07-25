@@ -6,5 +6,12 @@
 - else
   %li
     = link_to (t 'session.sign_out'), destroy_user_session_path, method: :delete
+- if current_user
+  %li
+    = link_to edit_user_path(current_user) do
+      %i.glyphicon.glyphicon-cog
+      = t 'settings'
 %li
-  = link_to (t 'contact'), new_contact_path
+  = link_to new_contact_path do
+    %i.glyphicon.glyphicon-envelope
+    = t 'contact'

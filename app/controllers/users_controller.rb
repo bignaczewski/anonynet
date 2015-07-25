@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  respond_to :js
+
   # GET /users
   # GET /users.json
   def index
@@ -20,6 +23,11 @@ class UsersController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @user }
     end
+  end
+
+  def update
+    current_user.update(show_all: params[:user][:show_all])
+    redirect_to :back
   end
 
   def like

@@ -81,6 +81,8 @@ pl:
     created_logged: "Treść udostępniona przez zalogowanego użytkownika"
     trash: "Ta akcja spowoduje permanentne usunięcie postu"
     flag: "Ta akcja spowoduje zgłoszenie bieżącej treści do administratora oraz usunięcie jej z Twojego widoku"
+    show_none: "Odznacz jeśli nie chcesz widzieć postów od niezalogowanych użytkowników"
+    show_all: "Zaznacz jeśli chcesz widzieć posty od niezalogowanych użytkowników"
   date:
     abbr_day_names:
       - nie
@@ -325,6 +327,7 @@ pl:
       comment: "Komentarz"
       user:
         password: "Hasło"
+        username: "Użytkownik"
     errors:
       models:
         post:
@@ -385,3 +388,6 @@ pl:
   admin_panel_ign: "panelu administratora."
   not_logged_in: "Nie jesteś zalogowany. Możesz postować, komentować tylko posty udostępnione przez niezalogowanych użytkowników (takich jak Ty). Nie możesz lubić rzeczy udostępnionych przez innych i zalogowani użytkownicy mogą filtrować udostępniane przez Ciebie treści."
   current_category: "bieżąca kategoria"
+  settings: "Ustawienia konta"
+  change_account_settings: "Zmień ustawienia konta"
+  change_settings: "Potwierdź"
