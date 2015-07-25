@@ -9,7 +9,10 @@
     = growlyflash_static_notices
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  %body
+    - if controller_name == 'home' and action_name == 'index'
+      %body#body-with-background-image
+    - else
+      %body
     %header
       = render 'layouts/navigation'
     #main-container.container

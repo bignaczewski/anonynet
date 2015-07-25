@@ -1,7 +1,22 @@
-.page-header
-  %h1 Home#index
-%p Find me in app/views/home/index.html.erb
-%p to jest strona główna na której będą informacje, że jest to serwis anonimowy itp
-
-%p jeśli chcesz, możesz zobaczyć posty
-= link_to 'posty', posts_path
+.text-vertical-center
+  %br
+  %br
+  %h1 Anonynet
+  %br
+  %h2
+    = t 'feel_free'
+  %h2
+    = t 'feel_free_2'
+  %br
+  %h3
+    = t 'feel_free_3'
+  %br
+  %h4
+    = t 'feel_free_4'
+  %h4
+    = t 'feel_free_5'
+  %br
+    %h3
+      = t 'feel_free_6'
+    %br
+    = link_to I18n.t('feel_free_7'), posts_path, class: 'btn btn-dark btn-lg'
