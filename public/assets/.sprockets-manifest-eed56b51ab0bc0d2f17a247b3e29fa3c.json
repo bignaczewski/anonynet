@@ -30,14 +30,14 @@
     },
     "rails_admin/rails_admin-7723cc58acf2ec897be16e1f2fc59cbdd6b017f842e93c82ab3e81eb2bbfa811.js": {
       "logical_path": "rails_admin/rails_admin.js",
-      "mtime": "2015-07-24T23:00:52+02:00",
+      "mtime": "2015-07-25T19:05:00+02:00",
       "size": 363192,
       "digest": "7723cc58acf2ec897be16e1f2fc59cbdd6b017f842e93c82ab3e81eb2bbfa811",
       "integrity": "sha256-dyPMWKzy7Il74W4fL8WcvdawF/hC6TyCqz6B6yu/qBE="
     },
     "rails_admin/rails_admin-20c0a8873377bd85e0ff483a13ef6b4a82d2871c7c28f0fa7ed77d2319802cb2.css": {
       "logical_path": "rails_admin/rails_admin.css",
-      "mtime": "2015-07-24T23:00:52+02:00",
+      "mtime": "2015-07-25T19:05:00+02:00",
       "size": 173588,
       "digest": "20c0a8873377bd85e0ff483a13ef6b4a82d2871c7c28f0fa7ed77d2319802cb2",
       "integrity": "sha256-IMCohzN3vYXg/0g6E+9rSoLShxx8KPD6ftd9IxmALLI="
@@ -56,19 +56,26 @@
       "digest": "948429d2d71cda1ec511884b9acb61832b86e631e18567e9f25ae4839a447a24",
       "integrity": "sha256-lIQp0tcc2h7FEYhLmsthgyuG5jHhhWfp8lrkg5pEeiQ="
     },
-    "application-69c7ac67a99ac43c54a2028e50e4e5714b0065db41d92efd57afaa7e05acd9b6.js": {
-      "logical_path": "application.js",
-      "mtime": "2015-07-24T23:00:52+02:00",
-      "size": 230369,
-      "digest": "69c7ac67a99ac43c54a2028e50e4e5714b0065db41d92efd57afaa7e05acd9b6",
-      "integrity": "sha256-acesZ6maxDxUogKOUOTlcUsAZdtB2S79V6+qfgWs2bY="
+    "birds-9f44caaf5968049ebf14d84210a551e6f96cfd2c3e7f6d18d19fe35c635a02f9.jpg": {
+      "logical_path": "birds.jpg",
+      "mtime": "2007-11-02T20:16:14+01:00",
+      "size": 898095,
+      "digest": "9f44caaf5968049ebf14d84210a551e6f96cfd2c3e7f6d18d19fe35c635a02f9",
+      "integrity": "sha256-n0TKr1loBJ6/FNhCEKVR5vls/Sw+f20Y0Z/jXGNaAvk="
     },
-    "application-1dbfb89a2bd54af13fdf48b25db46cd88de6e867f4571c1d432b6e8d312df574.css": {
+    "application-e97529010b8604f6f99938880ce2206b3bc169ad2fcc2a5171cdf4b15ba4c46c.js": {
+      "logical_path": "application.js",
+      "mtime": "2015-07-25T19:05:00+02:00",
+      "size": 230218,
+      "digest": "e97529010b8604f6f99938880ce2206b3bc169ad2fcc2a5171cdf4b15ba4c46c",
+      "integrity": "sha256-6XUpAQuGBPb5mTiIDOIgazvBaa0vzCpRcc30sVukxGw="
+    },
+    "application-3c9b9cf8d41790b80defa48ae67a3ec79ae973101f4ed44b963812781c000e1b.css": {
       "logical_path": "application.css",
-      "mtime": "2015-07-24T23:00:52+02:00",
-      "size": 267627,
-      "digest": "1dbfb89a2bd54af13fdf48b25db46cd88de6e867f4571c1d432b6e8d312df574",
-      "integrity": "sha256-Hb+4mivVSvE/30iyXbRs2I3m6Gf0VxwdQytujTEt9XQ="
+      "mtime": "2015-07-25T19:05:00+02:00",
+      "size": 268301,
+      "digest": "3c9b9cf8d41790b80defa48ae67a3ec79ae973101f4ed44b963812781c000e1b",
+      "integrity": "sha256-PJuc+NQXkLgN76SK5no+x5rpcxAfTtRLljgSeBwADhs="
     },
     "rails_admin/aristo/images/bg_fallback-69fe09a001b1a5db2ea587c5ad86945184ca6d0768c6d8a78e744a5f2ba1d5fd.png": {
       "logical_path": "rails_admin/aristo/images/bg_fallback.png",
@@ -563,8 +570,9 @@
     "rails_admin/rails_admin.css": "rails_admin/rails_admin-20c0a8873377bd85e0ff483a13ef6b4a82d2871c7c28f0fa7ed77d2319802cb2.css",
     "rails_admin/jquery.colorpicker.js": "rails_admin/jquery.colorpicker-0275f6aebb5ddf53e57164c433a5563bb483cd9b621ed630558c1963fc5a4c6d.js",
     "rails_admin/jquery.colorpicker.css": "rails_admin/jquery.colorpicker-948429d2d71cda1ec511884b9acb61832b86e631e18567e9f25ae4839a447a24.css",
-    "application.js": "application-69c7ac67a99ac43c54a2028e50e4e5714b0065db41d92efd57afaa7e05acd9b6.js",
-    "application.css": "application-1dbfb89a2bd54af13fdf48b25db46cd88de6e867f4571c1d432b6e8d312df574.css",
+    "birds.jpg": "birds-9f44caaf5968049ebf14d84210a551e6f96cfd2c3e7f6d18d19fe35c635a02f9.jpg",
+    "application.js": "application-e97529010b8604f6f99938880ce2206b3bc169ad2fcc2a5171cdf4b15ba4c46c.js",
+    "application.css": "application-3c9b9cf8d41790b80defa48ae67a3ec79ae973101f4ed44b963812781c000e1b.css",
     "rails_admin/aristo/images/bg_fallback.png": "rails_admin/aristo/images/bg_fallback-69fe09a001b1a5db2ea587c5ad86945184ca6d0768c6d8a78e744a5f2ba1d5fd.png",
     "rails_admin/aristo/images/icon_sprite.png": "rails_admin/aristo/images/icon_sprite-34a30806fcba43a2effc9739cb7a370a865199a7d38bfcbc7c2474ef3ff70ded.png",
     "rails_admin/aristo/images/progress_bar.gif": "rails_admin/aristo/images/progress_bar-a2ed712d76dcffc7a06918cd389511bca2cf7bb91c12b1d865bf44c7b2c46289.gif",

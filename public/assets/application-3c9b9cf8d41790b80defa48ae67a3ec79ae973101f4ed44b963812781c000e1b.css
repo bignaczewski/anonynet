@@ -14606,9 +14606,13 @@ fieldset input:focus + .field-help {
     text-align: center
 }
 
-.glyphicon-flag, .glyphicon-trash, .show-comments, .actions {
+.glyphicon-flag, .glyphicon-trash, .show-comments, .actions, .glyphicon-user {
     position: relative;
     float: right
+}
+
+.glyphicon-user {
+    right: 3px
 }
 
 .glyphicon-comment, .glyphicon-thumbs-up {
@@ -14700,6 +14704,51 @@ html, body {
     display: inline-block;
     text-align: center;
     white-space: normal
+}
+
+.text-vertical-center {
+    text-align: center;
+    vertical-align: middle;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    height: 100%;
+    text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+    color: white
+}
+
+.btn-dark {
+    border-radius: 0;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4)
+}
+
+.btn-lg, .submit {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333
+}
+
+#body-with-background-image {
+    background-image: url("birds.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+}
+
+.bottom-right a:link {
+    position: fixed;
+    bottom: 80px;
+    right: 15%;
+    color: white;
+    text-decoration: none
 }
 
 .alert.growlyflash {

@@ -5984,9 +5984,6 @@
         })
     }), $(document).on("upload:start", "form", function () {
         $(this).find("input[type=submit]").attr("disabled", !0), NProgress.start()
-    }), $(document).on("upload:progress", "form", function (t) {
-        var e, n, i, o;
-        o = t.originalEvent.detail, e = o.loaded, i = o.total, n = Math.round(e / i * 100), NProgress.set(n)
     }), $(document).on("upload:complete", "form", function () {
         $(this).find("input.uploading").length || ($(this).find("input[type=submit]").removeAttr("disabled"), NProgress.done())
     })
