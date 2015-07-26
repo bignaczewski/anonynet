@@ -67,7 +67,7 @@ class PostsController < ApplicationController
     end
     @post.save
     respond_to do |format|
-      format.html { redirect_to posts_path }
+      format.html { redirect_to :back }
       format.js
     end
   end
