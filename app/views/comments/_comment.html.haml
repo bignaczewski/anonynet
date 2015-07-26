@@ -7,7 +7,7 @@
     - if current_user and !(comment.user_id and comment.user_id == current_user.id)
       = link_to report_comment_path(id: comment.id), method: :post, remote: true, data: { confirm: I18n.t('are_you_sure_to_report_comment') } do
         %i.glyphicon.glyphicon-flag
-    - if post.user_id
+    - if @post.user_id
       %i.glyphicon.glyphicon-user{title: I18n.t('posts.created_logged')}
     %div
       %br
