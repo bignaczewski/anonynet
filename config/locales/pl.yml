@@ -83,6 +83,7 @@ pl:
     flag: "Ta akcja spowoduje zgłoszenie bieżącej treści do administratora oraz usunięcie jej z Twojego widoku"
     show_none: "Odznacz jeśli nie chcesz widzieć postów od niezalogowanych użytkowników"
     show_all: "Zaznacz jeśli chcesz widzieć posty od niezalogowanych użytkowników"
+    my_posts: "Moje posty"
   date:
     abbr_day_names:
       - nie

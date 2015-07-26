@@ -12,35 +12,38 @@ class PostsController < ApplicationController
     new # for rendering new_post in index
     page = params[:page] ? params[:page] : 1
     category = params[:category].to_i if params[:category] and params[:category] != '0'
-    if category
-      @posts = Post.where(category_cd: category)
-                   .where.not(user_id: User.where(banned: true).ids)
-                   .where.not(hidden: true)
-
+    if category == -1
+      @posts = Post.where(user_id: current_user.id).order('created_at desc').page(page)
     else
-      @posts = Post.where.not(user_id: User.where(banned: true).ids)
-                   .where.not(hidden: true)
-    end
-    if current_user and current_user.show_all
-      @posts = @posts.where.not(user_id: User.where(banned: true).ids) # not banned
-                   .where.not(id: current_user.hidden_posts.pluck(:post_id)) # not hidden as post
-                   .order('created_at desc').page(page)
-    elsif current_user and !current_user.show_all
-      @posts = @posts.where.not(user_id: nil) #not anonymous
-                   .where.not(user_id: HiddenUser.where(user_id: current_user.id).pluck(:hidden_user_id))
-                   .where.not(id: current_user.hidden_posts.pluck(:post_id))
-                   .order('created_at desc').page(page)
-    else
-      @posts = @posts.order('created_at desc').page(page)
+      if category
+        @posts = Post.where(category_cd: category)
+                     .where.not(user_id: User.where(banned: true).ids)
+                     .where.not(hidden: true)
+      else
+        @posts = Post.where.not(user_id: User.where(banned: true).ids)
+                     .where.not(hidden: true)
+      end
+      if current_user and current_user.show_all
+        @posts = @posts.where.not(user_id: User.where(banned: true).ids) # not banned
+                     .where.not(id: current_user.hidden_posts.pluck(:post_id)) # not hidden as post
+                     .order('created_at desc').page(page)
+      elsif current_user and !current_user.show_all
+        @posts = @posts.where.not(user_id: nil) #not anonymous
+                     .where.not(user_id: HiddenUser.where(user_id: current_user.id).pluck(:hidden_user_id))
+                     .where.not(id: current_user.hidden_posts.pluck(:post_id))
+                     .order('created_at desc').page(page)
+      else
+        @posts = @posts.order('created_at desc').page(page)
+      end
     end
   end
 
   # GET /posts/1
   # GET /posts/1.json
-  def show # TODO filtrowanie na podstawie tego co wyzej, o ile zrobisz show (np. przy notyfikacjach)
+  def show
     @comment = Comment.new
     @post = Post.find(params[:id])
-    @comments = @post.comments
+    @comments = @post.comments.order('created_at asc')
   end
 
   # GET /posts/new
