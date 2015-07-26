@@ -522,7 +522,7 @@
      * http://jquery.org/license
      *
      * Date: 2014-12-16
-     */
+ */
         function (t) {
             function e(t, e, n, i) {
                 var o, r, s, a, l, c, d, p, f, m;
