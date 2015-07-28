@@ -18,7 +18,7 @@ class Post < ActiveRecord::Base
     html_escape
     image
     youtube
-    twitter
+    # twitter
     link :target => '_blank', :rel => 'nofollow'
     simple_format
   end
