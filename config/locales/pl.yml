@@ -384,7 +384,7 @@ pl:
       regrets: "Problemy"
       thoughts: "Przemyślenia"
       other: "Inne"
-  ban_info: "Zostałeś zbanowany. Skontaktuj się z administratorem serwisu. Nie możesz udostępniać nowych treści ani lubić treści innych. Twoje posty i komentarze nie są widoczne."
+  ban_info: "Zostałeś zbanowany. Skontaktuj się z administratorem serwisu. Nie możesz udostępniać nowych treści ani polubić treści innych. Twoje posty i komentarze nie są widoczne."
   admin_welcome: "Witam Panie Adminie. Przejdź do swojego"
   admin_panel_ign: "panelu administratora."
   not_logged_in: "Nie jesteś zalogowany. Możesz postować, komentować tylko posty udostępnione przez niezalogowanych użytkowników (takich jak Ty). Nie możesz lubić rzeczy udostępnionych przez innych i zalogowani użytkownicy mogą filtrować udostępniane przez Ciebie treści."
