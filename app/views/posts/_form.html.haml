@@ -8,7 +8,7 @@
 
   = hidden_field_tag(:category, params[:category])
   .form-control
-    = f.text_area :content, :id => 'submit-new-post', :size => '160x2', placeholder: t('posts.content')
+    = f.text_area :content, :id => 'submit-new-post', :size => '140x2', placeholder: t('posts.content')
   .field#attachment_field
     = f.attachment_field :image_content, direct: true, class: 'filestyle', 'data-buttonName': 'btn-primary', 'data-iconName': 'glyphicon-inbox', 'data-buttonBefore': 'true', 'data-buttonText': I18n.t('posts.upload_file')
   .actions#submit-post

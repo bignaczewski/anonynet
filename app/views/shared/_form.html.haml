@@ -10,6 +10,6 @@
             %li= msg
     = f.hidden_field :post_id, value: @post.id
     .form-group
-      = f.text_area :content, :id => "submit-#{@post.id}", :size => '46x3', placeholder: t('posts.content')
+      = f.text_area :content, :id => "submit-#{@post.id}", :size => '38x3', placeholder: t('posts.content')
     .actions#comment-form
       = f.submit t('posts.share'), class: 'btn btn-primary'
