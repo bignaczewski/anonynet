@@ -442,3 +442,19 @@ html, body {
   color: white;
   text-decoration: none;
 }
+
+.boxsizingBorder {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+textarea {
+  border: 1px solid #999999;
+  width: 86%;
+  margin: 5px 5px;
+}
+
+#comment-textarea {
+  width: 80%;
+}
