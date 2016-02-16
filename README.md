@@ -2,4 +2,4 @@ Anonymous Social Network *Anonynet* engineered as a final project of a BSc studi
 
 Copying is not allowed.
 
-# TODO: create scopes and put JS repeatable code in a separate file
+TODO: create scopes and put JS repeatable code in a separate file
